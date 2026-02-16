@@ -1,0 +1,1215 @@
+﻿<!doctype html>
+<html class="no-js bg-black2" lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Malhotra Engineering work</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+
+    <link rel="icon" type="image/png" href="assets/img/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/img/favicons/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+        href="../../css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Play:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/app.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        /* Red theme for category section */
+        .category-sec-1 .category-card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(227, 40, 1, 0.1);
+        }
+
+        .category-sec-1 .category-card:hover {
+            border-color: #e32801;
+            box-shadow: 0 8px 20px rgba(227, 40, 1, 0.15);
+        }
+
+        .category-sec-1 .category-card {
+            transition: all 0.3s ease;
+            background: #262222;
+            border-radius: 12px;
+            padding: 15px;
+            border: 2px solid rgba(227, 40, 1, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .category-sec-1 .category-card:hover {
+            border: 2px solid #e32801;
+            box-shadow: 0 8px 24px rgba(227, 40, 1, 0.2);
+            transform: translateY(-5px);
+        }
+        .category-sec-1 .category-card:hover .box-title a {
+            color: #e32801;
+            font-weight: 700;
+        }
+
+        .category-sec-1 .box-title a {
+            color: #d8d8d8;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .category-sec-1 .box-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+
+        .category-sec-1 .slider-arrow {
+            background: #e32801;
+            color: white;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .category-sec-1 .slider-arrow:hover {
+            background: #b82001;
+            box-shadow: 0 6px 16px rgba(227, 40, 1, 0.3);
+            transform: scale(1.05);
+        }
+        /* Red theme for feature section */
+        .feature-sec-1 .feature-list-1 {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(227, 40, 1, 0.1);
+        }
+        .feature-sec-1 .feature-list-1:hover {
+            border-color: #e32801;
+            box-shadow: 0 8px 20px rgba(227, 40, 1, 0.15);
+        }
+        .feature-sec-1 .feature-list-1:hover .th-btn {
+            background: #e32801;
+        }
+        .feature-sec-1 .slider-arrow.default.radius {
+            background: #e32801;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .feature-sec-1 .slider-arrow.default.radius:hover {
+            background: #b82001;
+            box-shadow: 0 4px 12px rgba(227, 40, 1, 0.3);
+        }
+        /* Product card styling */
+        .feature-sec-1 .feature-list-1 .box-title a {
+            color: #1a1a1a;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .feature-sec-1 .feature-list-1:hover .box-title a {
+            color: #e32801;
+        }
+        .feature-sec-1 .th-btn.sm.style3.pill {
+            background: #e32801 !important;
+            color: white !important;
+            border: 2px solid #e32801 !important;
+            font-weight: 600 !important;
+            transition: all 0.3s ease !important;
+        }
+        .feature-sec-1 .th-btn.sm.style3.pill:hover {
+            background: #b82001 !important;
+            border-color: #b82001 !important;
+            box-shadow: 0 4px 12px rgba(227, 40, 1, 0.3) !important;
+        }
+        .feature-sec-1 .box-text {
+            color: #999999 !important;
+            font-weight: 600 !important;
+        }
+    </style>
+</head>
+
+<body class="bg-black2">
+    <div class="slider-drag-cursor">&lt;DRAG&gt;</div>
+    <!-- -->
+   
+    <div class="sidemenu-wrapper sidemenu-cart d-none d-lg-block">
+        <div class="sidemenu-content">
+            <button class="closeButton sideMenuCls">
+                <i class="far fa-times"></i>
+            </button>
+            <div class="widget woocommerce widget_shopping_cart">
+                <h3 class="widget_title">Shopping cart</h3>
+                <div class="widget_shopping_cart_content">
+                    <ul class="woocommerce-mini-cart cart_list product_list_widget">
+                        <li class="woocommerce-mini-cart-item mini_cart_item">
+                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
+                            <a href="#"><img src="assets/img/product/product_1_1.png" alt="Cart Image" />Bosco Apple
+                                Fruit</a>
+                            <span class="quantity">1 ×
+                                <span class="woocommerce-Price-amount amount"><span
+                                        class="woocommerce-Price-currencySymbol">$</span>940.00</span></span>
+                        </li>
+                        <li class="woocommerce-mini-cart-item mini_cart_item">
+                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
+                            <a href="#"><img src="assets/img/product/product_1_2.png" alt="Cart Image" />Green
+                                Cauliflower</a>
+                            <span class="quantity">1 ×
+                                <span class="woocommerce-Price-amount amount"><span
+                                        class="woocommerce-Price-currencySymbol">$</span>899.00</span></span>
+                        </li>
+                        <li class="woocommerce-mini-cart-item mini_cart_item">
+                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
+                            <a href="#"><img src="assets/img/product/product_1_3.png" alt="Cart Image" />Mandarin
+                                orange</a>
+                            <span class="quantity">1 ×
+                                <span class="woocommerce-Price-amount amount"><span
+                                        class="woocommerce-Price-currencySymbol">$</span>756.00</span></span>
+                        </li>
+                        <li class="woocommerce-mini-cart-item mini_cart_item">
+                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
+                            <a href="#"><img src="assets/img/product/product_1_4.png" alt="Cart Image" />Shallot Red
+                                onion</a>
+                            <span class="quantity">1 ×
+                                <span class="woocommerce-Price-amount amount"><span
+                                        class="woocommerce-Price-currencySymbol">$</span>723.00</span></span>
+                        </li>
+                        <li class="woocommerce-mini-cart-item mini_cart_item">
+                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
+                            <a href="#"><img src="assets/img/product/product_1_5.png" alt="Cart Image" />Sour Red
+                                Cherry</a>
+                            <span class="quantity">1 ×
+                                <span class="woocommerce-Price-amount amount"><span
+                                        class="woocommerce-Price-currencySymbol">$</span>1080.00</span></span>
+                        </li>
+                    </ul>
+                    <p class="woocommerce-mini-cart__total total">
+                        <strong>Subtotal:</strong>
+                        <span class="woocommerce-Price-amount amount"><span
+                                class="woocommerce-Price-currencySymbol">$</span>4398.00</span>
+                    </p>
+                    <p class="woocommerce-mini-cart__buttons buttons">
+                        <a href="cart.html" class="th-btn wc-forward">View cart</a>
+                        <a href="checkout.html" class="th-btn checkout wc-forward">Checkout</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-search-box d-none d-lg-block">
+        <button class="searchClose"><i class="fal fa-times"></i></button>
+        <form action="#">
+            <input type="text" placeholder="What are you looking for?" />
+            <button type="submit"><i class="fal fa-search"></i></button>
+        </form>
+    </div>
+    <div class="th-menu-wrapper">
+      <div class="th-menu-area text-center">
+        <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+        <div class="mobile-logo">
+          <a href="index.html"
+            ><img src="assets/images/new-bike-1.png" alt="Kars-html"
+          /></a>
+        </div>
+        <div class="th-mobile-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="menu-item-has-children">
+              <a href="our-products.html">Products</a>
+              <ul class="sub-menu">
+                <li><a href="our-products.html?category=parts">Parts</a></li>
+                <li><a href="our-products.html?category=wheels">Wheels</a></li>
+                <li><a href="our-products.html?category=engine">Engine</a></li>
+                <li><a href="our-products.html?category=suspension">Suspension</a></li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <header class="th-header header-layout2">
+        <div class="sticky-wrapper">
+            <div class="menu-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <div class="header-left-wrapper">
+                                <div class="header-logo">
+                                    <a href="index.html">
+                                        <!-- <img src="assets/img/logo-white.svg" alt="Kars-html" -->
+                                        <h2 style="font-size: 23px; margin: 0px; text-align: right; color: #fff; font-weight: 700; line-height: 1.2;">
+                                            Malhotra Engineering <br />
+                                            <span style="
+                            color: #e32801;
+                            font-size: 35px;
+                            line-height: 10px;
+                          ">work</span>
+                                        </h2>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <nav class="main-menu d-none d-lg-inline-block">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li class="menu-item-has-children">
+                                        <a href="our-products.html">Products</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="our-products.html?category=parts">Parts</a></li>
+                                            <li><a href="our-products.html?category=wheels">Wheels</a></li>
+                                            <li><a href="our-products.html?category=engine">Engine</a></li>
+                                            <li><a href="our-products.html?category=suspension">Suspension</a></li>
+                                        </ul>
+                                    </li>
+                                     <li><a href="assets/images/MAGICAL CATALOUGE 13.10.2025.pdf" target="_blank">Catalogue</a></li>
+                                     <li><a href="career.html">Careers</a></li>
+                                  
+                                </ul>
+                            </nav>
+                            <button type="button" class="th-menu-toggle d-block d-lg-none">
+                                <i class="far fa-bars"></i>
+                            </button>
+                        </div>
+                        <div class="col-auto d-none d-xl-block">      
+                           <div class="car-bottom">
+               
+                      <a class="th-btn sm" href="contact.html">Contact Us <i class="fas fa-arrow-up-right"></i></a>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="th-hero-wrapper hero-3" id="hero">
+        <div class="hero-3-right-circle"></div>
+       
+        <div class="slider-3-pagination">
+            <button data-slider-prev="#heroSlider2" class="slider-arrow default show-all style-2">
+                <i class="far fa-arrow-left"></i>
+            </button>
+            <button data-slider-next="#heroSlider2" class="slider-arrow default show-all style-2">
+                <i class="far fa-arrow-right"></i>
+            </button>
+        </div>
+        
+
+    <section class="hero-banner-section" style="position: relative; height:650px; overflow: hidden;">
+        <div class="swiper th-slider" id="heroBannerSlider" style="height: 100%;"
+            data-slider-options='{"loop": true, "autoplay": {"delay": 5000}, "effect": "fade"}'>
+            <div class="swiper-wrapper" style="height: 100%;">
+                <div class="swiper-slide" style="height: 100%;">
+                    <img src="assets/images/1hero.jpg" alt="Banner 1" style="width: 100%; height: 100%; object-fit: cover;" />
+                </div>
+                <div class="swiper-slide" style="height: 100%;">
+                    <img src="assets/images/2hero.jpg" alt="Banner 2" style="width: 100%; height: 100%; object-fit: cover;" />
+                </div>
+                <div class="swiper-slide" style="height: 100%;">
+                    <img src="assets/images/3rd-hero.jpg" alt="Banner 3" style="width: 100%; height: 100%; object-fit: cover;" />
+                </div>
+            </div>
+        </div>
+        <div class="banner-nav-buttons" style="position: absolute; bottom: 20px; right: 30px; z-index: 10; display: flex; gap: 10px;">
+            <button data-slider-prev="#heroBannerSlider" class="banner-nav-btn" style="background: #e32801; color: white; border: none; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(227, 40, 1, 0.3);">
+                <i class="far fa-arrow-left"></i>
+            </button>
+            <button data-slider-next="#heroBannerSlider" class="banner-nav-btn" style="background: #e32801; color: white; border: none; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(227, 40, 1, 0.3);">
+                <i class="far fa-arrow-right"></i>
+            </button>
+        </div>
+        <style>
+            .banner-nav-btn:hover {
+                background: #b82001;
+                box-shadow: 0 6px 16px rgba(227, 40, 1, 0.5);
+                transform: scale(1.05);
+            }
+        </style>
+    </section>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- About Section -->
+    <div class="about-1-wrapper overflow-hidden" id="about-sec">
+        <div class="container">
+            <div class="row gy-40 flex-wrap-reverse justify-content-center align-items-center">
+                <!-- About Image Column -->
+                <div class="col-xl-5">
+                    <div class="img-box1 about-1">
+                        <div class="img1">
+                            <img class="tilt-active" src="assets/images/about-1.jpg" alt="About Malhotra Engineering" />
+                        </div>
+                        <h3 class="box-title">
+                            <span class="number text-theme">
+                                <span class="counter-number">24</span>
+                            </span>
+                            <span class="plus text-theme">+</span>
+                            Years of Experience
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- About Content Column -->
+                <div class="col-xl-7" style="margin: 0px;">
+                    <div class="title-area text-left mb-25">
+                        <h2 class="big-heading">About Us</h2>
+                        <span class="sub-title style-2 mt-2">
+                            <img src="assets/img/icon/title-3_icon.svg" alt="Icon" />
+                            Precision Engineering Excellence
+                        </span>
+                        <h2 class="sec-title">Precision-Engineered Solutions</h2>
+                        <p class="sec-text">
+                            Malhotra Engineering specializes in the manufacturing of hydraulic brake parts, rubber-to-metal bonded components, and precision rubber parts designed to meet the demanding performance requirements of modern vehicles. With strong technical capabilities and a commitment to innovation, the company delivers durable and high-performance solutions across domestic and international markets.
+                        </p>
+                        <p class="sec-text" style="margin-top: 15px;">
+                            The company offers a comprehensive range of components for heavy-duty commercial vehicles, trailers, earthmoving equipment, material handling systems, and agricultural vehicles, supporting Indian, European, Japanese, Chinese, and American applications.
+                        </p>
+                    </div>
+
+                    <!-- About Features -->
+                   
+
+                    <a href="about.html" class="th-btn style3 border-style">
+                        More About Us <i class="fas fa-arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="category-sec-1 position-relative space arrow-wrap"
+        style="background: linear-gradient(135deg, rgba(227, 40, 1, 0.05) 0%, rgba(227, 40, 1, 0.02) 100%); border-top: 3px solid #e32801; border-bottom: 3px solid #e32801; padding-top: 110px; padding-bottom: 110px;">
+        <div class="container-fluid">
+            <div class="title-area text-center" style="margin-bottom: 50px;">
+                <h3 class="sub-title" style="font-weight: 600; font-size: 14px; letter-spacing: 2px; color: #e32801; margin-bottom: 15px;">
+                    <span class="double-line" style="background: #e32801; display: inline-block; height: 2px; width: 20px; margin-right: 10px; vertical-align: middle;"></span>CV Product Range
+                </h3>
+                <h2 class="sec-title" style="color: #e32801; font-size: 42px; font-weight: 700; margin: 0;">Commercial Vehicle Products</h2>
+            </div>
+            <div class="slider-area">
+                <div class="swiper th-slider swiper-initialized swiper-horizontal" id="categorySlider1"
+                    data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"400":{"slidesPerView":"2"},"768":{"slidesPerView":"3"},"992":{"slidesPerView":"4"},"1200":{"slidesPerView":"5"}, "1300":{"slidesPerView":"6"}}}'>
+                    <div class="swiper-wrapper" id="swiper-wrapper-fc61b5776965285b" aria-live="off" style="
+                transition-duration: 0ms;
+                transform: translate3d(-448px, 0px, 0px);
+                transition-delay: 0ms;
+              ">
+                        <div class="swiper-slide" role="group" aria-label="1 / 12" data-swiper-slide-index="0"
+                            style="width: 200px; margin-right: 24px">
+                            <div class="category-card">
+                                <div class="box-icon">
+                                    <img src="assets/images/new-bike-1.png" alt="Image" />
+                                </div>
+                                <h3 class="box-title">
+                                    <a href="">COROLLA</a>
+                                </h3>
+                            </div>
+                        </div>
+                           <div class="swiper-slide" role="group" aria-label="1 / 12" data-swiper-slide-index="0"
+                            style="width: 200px; margin-right: 24px">
+                            <div class="category-card">
+                                <div class="box-icon">
+                                    <img src="assets/images/new-bike-1.png" alt="Image" />
+                                </div>
+                                <h3 class="box-title">
+                                    <a href="">COROLLA</a>
+                                </h3>
+                            </div>
+                        </div>
+                           <div class="swiper-slide" role="group" aria-label="1 / 12" data-swiper-slide-index="0"
+                            style="width: 200px; margin-right: 24px">
+                            <div class="category-card">
+                                <div class="box-icon">
+                                    <img src="assets/images/new-bike-1.png" alt="Image" />
+                                </div>
+                                <h3 class="box-title">
+                                    <a href="">COROLLA</a>
+                                </h3>
+                            </div>
+                        </div>
+                           <div class="swiper-slide" role="group" aria-label="1 / 12" data-swiper-slide-index="0"
+                            style="width: 200px; margin-right: 24px">
+                            <div class="category-card">
+                                <div class="box-icon">
+                                    <img src="assets/images/new-bike-1.png" alt="Image" />
+                                </div>
+                                <h3 class="box-title">
+                                    <a href="">COROLLA</a>
+                                </h3>
+                            </div>
+                        </div>
+                           <div class="swiper-slide" role="group" aria-label="1 / 12" data-swiper-slide-index="0"
+                            style="width: 200px; margin-right: 24px">
+                            <div class="category-card">
+                                <div class="box-icon">
+                                    <img src="assets/images/new-bike-1.png" alt="Image" />
+                                </div>
+                                <h3 class="box-title">
+                                    <a href="">COROLLA</a>
+                                </h3>
+                            </div>
+                        </div>
+                           <div class="swiper-slide" role="group" aria-label="1 / 12" data-swiper-slide-index="0"
+                            style="width: 200px; margin-right: 24px">
+                            <div class="category-card">
+                                <div class="box-icon">
+                                    <img src="assets/images/new-bike-1.png" alt="Image" />
+                                </div>
+                                <h3 class="box-title">
+                                    <a href="">COROLLA</a>
+                                </h3>
+                            </div>
+                        </div>
+                           <div class="swiper-slide" role="group" aria-label="1 / 12" data-swiper-slide-index="0"
+                            style="width: 200px; margin-right: 24px">
+                            <div class="category-card">
+                                <div class="box-icon">
+                                    <img src="assets/images/new-bike-1.png" alt="Image" />
+                                </div>
+                                <h3 class="box-title">
+                                    <a href="">COROLLA</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                </div>
+                <button data-slider-prev="#categorySlider1" class="slider-arrow slider-prev style-2">
+                    <i class="far fa-arrow-left"></i>
+                </button>
+                <button data-slider-next="#categorySlider1" class="slider-arrow slider-next style-2">
+                    <i class="far fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="feature-sec-1 space shape-mockup-wrap" style="background: linear-gradient(135deg, rgba(227, 40, 1, 0.03) 0%, rgba(227, 40, 1, 0.01) 100%); ">
+        <div class="shape-mockup moving" style="bottom: 0px; left: 3%;"><img
+                src="assets/img/shape/features-icon-bottom-5.png" alt="shape"></div>
+        <div class="container-fluid">
+            <div class="row justify-content-lg-between justify-content-center align-items-center">
+                <div class="col-xxl-6 col-xl-6 col-lg-7">
+                    <div class="title-area text-center text-lg-start">
+                        <h2 class="sec-title" style="color: #e32801;">Commercial Vehicle Components</h2>
+                        <p class="pe-lg-5 me-xl-5">Durable, precision-engineered parts designed for reliable performance in demanding commercial vehicle applications.</p>
+                    </div>
+                </div>
+                <div class="col-auto mt-2 d-none d-lg-block">
+                    <div class="sec-btn"><button data-slider-prev="#featureSlider5"
+                            class="slider-arrow default radius" style="background: #e32801; color: white;"><i class="far fa-arrow-left"></i></button> <button
+                            data-slider-next="#featureSlider5" class="slider-arrow default radius" style="background: #e32801; color: white;"><i
+                                class="far fa-arrow-right"></i></button></div>
+                </div>
+            </div>
+            <div class="swiper th-slider has-shadow swiper-initialized swiper-horizontal" id="featureSlider5"
+                data-slider-options="{&quot;centeredSlides&quot;:false,&quot;loop&quot;:true,&quot;breakpoints&quot;:{&quot;0&quot;:{&quot;slidesPerView&quot;:1},&quot;576&quot;:{&quot;slidesPerView&quot;:&quot;1&quot;},&quot;768&quot;:{&quot;slidesPerView&quot;:&quot;2&quot;},&quot;992&quot;:{&quot;slidesPerView&quot;:&quot;3&quot;},&quot;1200&quot;:{&quot;slidesPerView&quot;:&quot;4&quot;},&quot;1400&quot;:{&quot;slidesPerView&quot;:&quot;5&quot;}}}">
+                <div class="swiper-wrapper" id="swiper-wrapper-efc4cf4c1bfe169f" aria-live="off"
+                    style="transition-duration: 1000ms; transform: translate3d(-2688px, 0px, 0px);">
+                    <div class="swiper-slide" role="group" aria-label="6 / 12" data-swiper-slide-index="5"
+                        style="width: 312px; margin-right: 24px;">
+                        <div class="feature-list-1 style-2">
+                            <div class="box-icon"><img src="assets/images/product-img.png" alt="image">
+                                
+                            </div>
+                            <div class="car-content">
+                                <div class="media-body">
+                                    <h3 class="box-title"><a href="">COROLLA</a></h3>
+                                     <!-- <h4 class="box-title"><a href=""></a></h4> -->
+                                    <p class="box-text"><span>TOYOTA</p>
+                                </div>
+                                
+                                <div class="car-bottom">
+                                   <a class="th-btn sm style3 pill"
+                                        href="">View Details <i
+                                            class="fas fa-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                     <div class="swiper-slide" role="group" aria-label="6 / 12" data-swiper-slide-index="5"
+                        style="width: 312px; margin-right: 24px;">
+                        <div class="feature-list-1 style-2">
+                            <div class="box-icon"><img src="assets/images/product-img.png" alt="image">
+                                
+                            </div>
+                            <div class="car-content">
+                                <div class="media-body">
+                                    <h3 class="box-title"><a href="">COROLLA</a></h3>
+                                     <!-- <h4 class="box-title"><a href=""></a></h4> -->
+                                    <p class="box-text"><span>TOYOTA</p>
+                                </div>
+                                
+                                <div class="car-bottom">
+                                   <a class="th-btn sm style3 pill"
+                                        href="">View Details <i
+                                            class="fas fa-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="swiper-slide" role="group" aria-label="6 / 12" data-swiper-slide-index="5"
+                        style="width: 312px; margin-right: 24px;">
+                        <div class="feature-list-1 style-2">
+                            <div class="box-icon"><img src="assets/images/product-img.png" alt="image">
+                                
+                            </div>
+                            <div class="car-content">
+                                <div class="media-body">
+                                    <h3 class="box-title"><a href="">COROLLA</a></h3>
+                                     <!-- <h4 class="box-title"><a href=""></a></h4> -->
+                                    <p class="box-text"><span>TOYOTA</p>
+                                </div>
+                                
+                                <div class="car-bottom">
+                                   <a class="th-btn sm style3 pill"
+                                        href="">View Details <i
+                                            class="fas fa-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="swiper-slide" role="group" aria-label="6 / 12" data-swiper-slide-index="5"
+                        style="width: 312px; margin-right: 24px;">
+                        <div class="feature-list-1 style-2">
+                            <div class="box-icon"><img src="assets/images/product-img.png" alt="image">
+                                
+                            </div>
+                            <div class="car-content">
+                                <div class="media-body">
+                                    <h3 class="box-title"><a href="">COROLLA</a></h3>
+                                     <!-- <h4 class="box-title"><a href=""></a></h4> -->
+                                    <p class="box-text"><span>TOYOTA</p>
+                                </div>
+                                
+                                <div class="car-bottom">
+                                   <a class="th-btn sm style3 pill"
+                                        href="">View Details <i
+                                            class="fas fa-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="swiper-slide" role="group" aria-label="6 / 12" data-swiper-slide-index="5"
+                        style="width: 312px; margin-right: 24px;">
+                        <div class="feature-list-1 style-2">
+                            <div class="box-icon"><img src="assets/images/product-img.png" alt="image">
+                                
+                            </div>
+                            <div class="car-content">
+                                <div class="media-body">
+                                    <h3 class="box-title"><a href="">COROLLA</a></h3>
+                                     <!-- <h4 class="box-title"><a href=""></a></h4> -->
+                                    <p class="box-text"><span>TOYOTA</p>
+                                </div>
+                                
+                                <div class="car-bottom">
+                                   <a class="th-btn sm style3 pill"
+                                        href="">View Details <i
+                                            class="fas fa-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="swiper-slide" role="group" aria-label="6 / 12" data-swiper-slide-index="5"
+                        style="width: 312px; margin-right: 24px;">
+                        <div class="feature-list-1 style-2">
+                            <div class="box-icon"><img src="assets/images/product-img.png" alt="image">
+                                
+                            </div>
+                            <div class="car-content">
+                                <div class="media-body">
+                                    <h3 class="box-title"><a href="">COROLLA</a></h3>
+                                     <!-- <h4 class="box-title"><a href=""></a></h4> -->
+                                    <p class="box-text"><span>TOYOTA</p>
+                                </div>
+                                
+                                <div class="car-bottom">
+                                   <a class="th-btn sm style3 pill"
+                                        href="">View Details <i
+                                            class="fas fa-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="swiper-slide" role="group" aria-label="6 / 12" data-swiper-slide-index="5"
+                        style="width: 312px; margin-right: 24px;">
+                        <div class="feature-list-1 style-2">
+                            <div class="box-icon"><img src="assets/images/product-img.png" alt="image">
+                                
+                            </div>
+                            <div class="car-content">
+                                <div class="media-body">
+                                    <h3 class="box-title"><a href="">COROLLA</a></h3>
+                                     <!-- <h4 class="box-title"><a href=""></a></h4> -->
+                                    <p class="box-text"><span>TOYOTA</p>
+                                </div>
+                                
+                                <div class="car-bottom">
+                                   <a class="th-btn sm style3 pill"
+                                        href="">View Details <i
+                                            class="fas fa-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="swiper-slide" role="group" aria-label="6 / 12" data-swiper-slide-index="5"
+                        style="width: 312px; margin-right: 24px;">
+                        <div class="feature-list-1 style-2">
+                            <div class="box-icon"><img src="assets/images/product-img.png" alt="image">
+                                
+                            </div>
+                            <div class="car-content">
+                                <div class="media-body">
+                                    <h3 class="box-title"><a href="">COROLLA</a></h3>
+                                     <!-- <h4 class="box-title"><a href=""></a></h4> -->
+                                    <p class="box-text"><span>TOYOTA</p>
+                                </div>
+                                
+                                <div class="car-bottom">
+                                   <a class="th-btn sm style3 pill"
+                                        href="">View Details <i
+                                            class="fas fa-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                  
+                   
+                  
+                   
+                </div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="feature-sec-3 space">
+      <div class="container">
+        <div class="feature-3-list-wrap">
+          <div class="feature-list-3">
+            <div class="feature-list-3__box-icon">
+              <img src="assets/img/icon/featured-3-1.svg" alt="image" />
+            </div>
+            <div class="feature-list-3__content">
+              <h3 class="box-title">All Car Makes</h3>
+              <p class="box-text">
+                Includes regular tasks like oil changes, tire rotations, and
+                fluid checks. These are essential to keep the vehicle running
+                efficiently and prevent major breakdowns.
+              </p>
+            </div>
+          </div>
+          <div class="feature-list-3">
+            <div class="feature-list-3__box-icon">
+              <img src="assets/img/icon/featured-3-2.svg" alt="image" />
+            </div>
+            <div class="feature-list-3__content">
+              <h3 class="box-title">Variety of Services</h3>
+              <p class="box-text">
+                Reputable auto repair shops offer transparent pricing and
+                detailed estimates before work begins. This includes explaining
+                the scope of work, required parts, and labor costs.
+              </p>
+            </div>
+          </div>
+          <div class="feature-list-3">
+            <div class="feature-list-3__box-icon">
+              <img src="assets/img/icon/featured-3-3.svg" alt="image" />
+            </div>
+            <div class="feature-list-3__content">
+              <h3 class="box-title">Quality Support</h3>
+              <p class="box-text">
+                Regular maintenance and timely repairs prevent small problems
+                from escalating into costly repairs. For example, changing the
+                oil regularly helps prevent engine wear.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+   
+    <!-- <div class="counter-sec1" data-pos-for=".th-service-1" data-sec-pos="bottom-half">
+        <div class="counter-1-bg-wrap" data-bg-src="assets/img/bg/counter-1-bg.jpg">
+            <div class="container">
+                <div class="counter-card-wrap">
+                    <div class="counter-card">
+                        <div class="box-icon">
+                            <img src="assets/img/icon/counter_1_1.svg" alt="Icon" />
+                        </div>
+                        <div class="media-body">
+                            <h4 class="box-number">
+                                <span class="counter-number">2760 </span><span class="plus-simple">+</span>
+                            </h4>
+                            <p class="box-text">Success Projects</p>
+                        </div>
+                    </div>
+                    <div class="counter-card">
+                        <div class="box-icon">
+                            <img src="assets/img/icon/counter_1_2.svg" alt="Icon" />
+                        </div>
+                        <div class="media-body">
+                            <h4 class="box-number">
+                                <span class="counter-number">300 </span><span class="plus-simple">+</span>
+                            </h4>
+                            <p class="box-text">Professional Team</p>
+                        </div>
+                    </div>
+                    <div class="counter-card">
+                        <div class="box-icon">
+                            <img src="assets/img/icon/counter_1_3.svg" alt="Icon" />
+                        </div>
+                        <div class="media-body">
+                            <h4 class="box-number">
+                                <span class="counter-number">2660 </span><span class="plus-simple">+</span>
+                            </h4>
+                            <p class="box-text">Clients Satisfied</p>
+                        </div>
+                    </div>
+                    <div class="counter-card">
+                        <div class="box-icon">
+                            <img src="assets/img/icon/counter_1_4.svg" alt="Icon" />
+                        </div>
+                        <div class="media-body">
+                            <h4 class="box-number">
+                                <span class="counter-number">456 </span><span class="plus-simple">+</span>
+                            </h4>
+                            <p class="box-text">Winning Awards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+    <div class="why-sec-1 overflow-hidden" id="why-sec">
+        <div class="shape-mockup" data-bottom="0%" data-left="0">
+            <img src="assets/img/shape/why-choose-shape-1.png" alt="shape" />
+        </div>
+        <div class="container-fluid" style="width: 90%;">
+            <div class="row gy-50 align-items-center">
+                <div class="col-xl-6">
+                    <div class="why-choose-1-content-wrap pe-xl-5 me-xl-5">
+                        <div class="title-area text-left">
+                            <h2 class="big-heading">Choose Us</h2>
+                            <span class="sub-title style-2 mt-2">
+                                <span class="icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                                    </svg>
+                                </span>
+                                Why Choose Us
+                            </span>
+                            <h2 class="sec-title">
+                                Precision Engineering & Manufacturing Excellence
+                            </h2>
+                            <p class="sec-text">
+                                Malhotra Engineering delivers advanced manufacturing solutions with state-of-the-art CNC systems and precision facilities. With 24+ years of proven expertise, we specialize in hydraulic brake parts, rubber-to-metal bonded components, and precision rubber parts for demanding commercial vehicle applications.
+                            </p>
+                        </div>
+                        <div class="why-1-bottom-wrapper">
+                            <div class="why-1-bottom-box">
+                                <div class="box-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <h3 class="box-title">Advanced CNC Manufacturing Capabilities</h3>
+                            </div>
+                            <div class="why-1-bottom-box">
+                                <div class="box-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                    </svg>
+                                </div>
+                                <h3 class="box-title">Comprehensive Quality Control Standards</h3>
+                            </div>
+                            <div class="why-1-bottom-box">
+                                <div class="box-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="box-title">International Market Compatibility Support</h3>
+                            </div>
+                            <div class="why-1-bottom-box">
+                                <div class="box-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                        <polyline points="2 17 12 22 22 17"></polyline>
+                                        <polyline points="2 12 12 17 22 12"></polyline>
+                                    </svg>
+                                </div>
+                                <h3 class="box-title">Proven Technical Expertise & Innovation</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="why-choose-1-right">
+                        
+                        <img src="assets/images/why-choose.jpg" alt="Image" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+  
+<!--    
+    <div class="marquee-section overflow-hidden">
+        <div class="marquee-bg-wrap"></div>
+        <div class="marquee-wrapper">
+            <div class="marquee">
+                <div class="marquee-group">
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                </div>
+                <div aria-hidden="true" class="marquee-group">
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                    <div class="text">
+                        <a href="service.html"><img src="assets/img/icon/marquee-icon-1-1.svg" alt="img" />Cleaning
+                            Agency</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+<section class="automotive-innovation" style="padding: 80px 0px 0px 0px;">
+    <div class="container-fluid">
+        <!-- Title Section -->
+        <div class="innovation-header text-center">
+            <h2 class="innovation-title">AUTOMOTIVE INNOVATIONS NEVER STOP</h2>
+            <p class="innovation-desc">
+                As Malhotra is a well-established firm, We are distributing our qualitative range of auto parts to our clients. Our excellent experience for more than 60 years has helped us to understand throughly the needs of our clients.
+            </p>
+        </div>
+
+        <!-- Timeline Section -->
+        <div class="innovation-timeline">
+            <!-- Wavy Line SVG -->
+            <svg class="timeline-wave" preserveAspectRatio="none" viewBox="0 0 1200 200">
+                <path class="wave-path" d="M 0 100 Q 100 50, 200 100 T 400 100 Q 500 150, 600 100 T 800 100 Q 900 50, 1000 100 T 1200 100"/>
+            </svg>
+
+            <!-- Timeline Items -->
+            <div class="timeline-container">
+                
+                <!-- 1960 -->
+                <div class="timeline-item timeline-top">
+                    <div class="timeline-image-wrap">
+                        <img src="assets/img/featured/featured-1-1.jpg" alt="1960" />
+                    </div>
+                    <div class="timeline-dot dot-pink"></div>
+                    <div class="timeline-year">1960</div>
+                </div>
+
+                <!-- 1980 -->
+                <div class="timeline-item timeline-bottom">
+                    <div class="timeline-year">1980</div>
+                    <div class="timeline-dot dot-cyan"></div>
+                    <div class="timeline-image-wrap">
+                        <img src="assets/img/featured/featured-1-2.jpg" alt="1980" />
+                    </div>
+                </div>
+
+                <!-- 1990 -->
+                <div class="timeline-item timeline-top">
+                    <div class="timeline-image-wrap">
+                        <img src="assets/img/featured/featured-1-3.jpg" alt="1990" />
+                    </div>
+                    <div class="timeline-dot dot-purple"></div>
+                    <div class="timeline-year">1990</div>
+                </div>
+
+                <!-- 2000 -->
+                <div class="timeline-item timeline-bottom">
+                    <div class="timeline-year">2000</div>
+                    <div class="timeline-dot dot-green"></div>
+                    <div class="timeline-image-wrap">
+                        <img src="assets/img/featured/featured-1-4.jpg" alt="2000" />
+                    </div>
+                </div>
+
+                <!-- 2021 -->
+                <div class="timeline-item timeline-top">
+                    <div class="timeline-image-wrap">
+                        <img src="assets/img/featured/featured-1-5.jpg" alt="2021" />
+                    </div>
+                    <div class="timeline-dot dot-orange"></div>
+                    <div class="timeline-year">2021</div>
+                </div>
+
+                <!-- 2025 -->
+                <div class="timeline-item timeline-bottom">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-dot dot-blue"></div>
+                    <div class="timeline-image-wrap">
+                        <img src="assets/img/featured/featured-1-6.jpg" alt="2025" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    <!-- Modern Dark Theme Footer -->
+    <footer class="footer-dark">
+        <!-- Newsletter Section -->
+      
+
+        <div class="footer-content">
+            <div class="container">
+                <!-- Main Footer Grid -->
+                <div class="row gy-5 mb-5">
+                    <!-- Company Info Section -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-column footer-col-brand">
+                            <div class="footer-brand">
+                                <h3 class="footer-title">Malhotra Engineering</h3>
+                                <div class="brand-accent"></div>
+                            </div>
+                            <p class="footer-desc">
+                                Premium automotive parts and components for all your vehicle needs. Quality, reliability, and performance in every product.
+                            </p>
+                            <div class="footer-social mt-5">
+                                <a href="#" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-column">
+                            <div class="section-header">
+                                <h4 class="footer-title">Quick Links</h4>
+                                <span class="section-dot"></span>
+                            </div>
+                            <ul class="footer-menu">
+                                <li><a href="index.html"><i class="fas fa-chevron-right"></i>Home</a></li>
+                                <li><a href="about.html"><i class="fas fa-chevron-right"></i>About Us</a></li>
+                                <!-- <li><a href="our-products.html"><i class="fas fa-chevron-right"></i>Products</a></li> -->
+                                <li><a href="contact.html"><i class="fas fa-chevron-right"></i>Contact Us</a></li>
+                                <li><a href="careers.html"><i class="fas fa-chevron-right"></i>Careers</a></li>
+                                  <li><a href="assets/images/MAGICAL CATALOUGE 13.10.2025.pdf" target="_blank"><i class="fas fa-chevron-right"></i>Catalogue</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Products -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-column">
+                            <div class="section-header">
+                                <h4 class="footer-title">Products</h4>
+                                <span class="section-dot"></span>
+                            </div>
+                            <ul class="footer-menu">
+                                <li><a href="our-products.html?category=parts"><i class="fas fa-chevron-right"></i>Engine Parts</a></li>
+                                <li><a href="our-products.html?category=wheels"><i class="fas fa-chevron-right"></i>Wheels & Tyres</a></li>
+                                <li><a href="our-products.html?category=suspension"><i class="fas fa-chevron-right"></i>Suspension</a></li>
+                                <li><a href="our-products.html?category=accessories"><i class="fas fa-chevron-right"></i>Accessories</a></li>
+                                <li><a href="our-products.html"><i class="fas fa-chevron-right"></i>View All</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-column">
+                            <h4 class="footer-title mb-4">Get In Touch</h4>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <p class="contact-label">Address</p>
+                                        <p class="contact-text">123 Engineering Street, Industrial Area</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <p class="contact-label">Phone</p>
+                                        <p class="contact-text"><a href="tel:+911234567890">+91 123-456-7890</a></p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <p class="contact-label">Email</p>
+                                        <p class="contact-text"><a href="mailto:info@malhotraeng.com">info@malhotraeng.com</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="footer-divider mt-5"></div>
+
+                <!-- Copyright & Bottom Section -->
+                <div class="row gy-3 align-items-center ">
+                    <div class="col-md-6">
+                        <p class="footer-copyright">
+                            &copy; 2025 Malhotra Engineering. All Rights Reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <ul class="footer-bottom-menu">
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="scroll-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="
+            transition: stroke-dashoffset 10ms linear 0s;
+            stroke-dasharray: 307.919, 307.919;
+            stroke-dashoffset: 307.919;
+          "></path>
+        </svg>
+    </div>
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
