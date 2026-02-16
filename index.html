@@ -226,6 +226,27 @@
         </div>
       </div>
     </div>
+    <!-- Top Header -->
+    <div class="header-top-bar">
+      <div class="container-fluid">
+        <div class="header-top-content">
+          <div class="header-contact-group">
+            <a href="tel:+919871088444"><i class="fas fa-phone  "></i> +91-9871088444</a>
+            <a href="mailto:magical1960@gmail.com"><i class="fas fa-envelope"></i> magical1960@gmail.com</a>
+          </div>
+          <div class="header-tagline">
+            <span id="rotatingTagline">Serving Since 1960 • Engineering Excellence</span>
+          </div>
+          <div class="header-social-icons">
+            <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://whatsapp.com" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <header class="th-header header-layout2">
         <div class="sticky-wrapper">
             <div class="menu-area">
@@ -1210,6 +1231,37 @@
     <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
     <script src="assets/js/app.min.js"></script>
     <script src="assets/js/main.js"></script>
+    
+    <script>
+        // Rotating Tagline Script
+        const taglines = [
+            "Serving Since 1960 • Engineering Excellence",
+            "Quality • Innovation • Reliability", 
+            "Leading Automotive Solutions India"
+        ];
+        
+        let currentIndex = 0;
+        const taglineElement = document.getElementById('rotatingTagline');
+        
+        function rotateTagline() {
+            // Add fade class
+            taglineElement.classList.add('tagline-fade');
+            
+            setTimeout(() => {
+                // Change text
+                currentIndex = (currentIndex + 1) % taglines.length;
+                taglineElement.textContent = taglines[currentIndex];
+                
+                // Remove fade class
+                taglineElement.classList.remove('tagline-fade');
+            }, 250);
+        }
+        
+        // Start rotation after page load
+        setTimeout(() => {
+            setInterval(rotateTagline, 3000);
+        }, 3000);
+    </script>
 </body>
 
 </html>

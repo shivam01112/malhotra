@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
     --theme-color: #F02801;
     --theme-color2: #FE8900;
@@ -17,8 +19,8 @@
     --th-border-color: #D8DDE1;
     --th-border-color2: #303030;
     --dark-color: #021526;
-    --title-font: "Play", serif;
-    --body-font: "DM Sans", serif;
+    --title-font: "Poppins", sans-serif;
+    --body-font: "Poppins", "DM Sans", sans-serif;
     --icon-font: "Font Awesome 6 Pro";
     --main-container: 1320px;
     --container-gutters: 30px;
@@ -7129,7 +7131,9 @@ ol.wp-block-rss {
 .footer-top .info-box_link {
     color: #99a4a3
 }
-
+.header-top-bar{
+    padding: 5px 30px !important;
+}
 @media(max-width: 575px) {
     .col-md-6:last-child .newsletter-widget {
         margin-bottom: 27px
@@ -7265,6 +7269,140 @@ ol.wp-block-rss {
 
 .download-widget-wrap .bottom .footer-time li p {
     margin-bottom: 5px
+}
+
+/* ================================
+   Header Top Bar
+   ================================ */
+
+.header-top-bar {
+  background: #111111;
+  border-bottom: 1px solid rgba(227, 40, 1, 0.15);
+  padding: 8px 0;
+  position: relative;
+  z-index: 40;
+}
+
+.header-top-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.header-contact-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-contact-group a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header-contact-group a i {
+  color: #e32801;
+  font-size: 13px;
+}
+
+.header-contact-group a:hover {
+  color: #e32801;
+}
+
+.header-tagline {
+  flex: 1;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.header-tagline span {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ff2828;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+    display: inline-block;
+}
+
+.tagline-fade {
+  opacity: 0;
+  transform: translateY(-5px);
+}
+
+.header-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-social-icons a {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(227, 40, 1, 0.2);
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.header-social-icons a:hover {
+  background: #e32801;
+  border-color: #e32801;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-top-bar {
+    padding: 6px 0;
+  }
+
+  .header-top-content {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .header-contact-group {
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header-contact-group a {
+    font-size: 12px;
+  }
+
+  .header-tagline {
+    padding: 4px 0;
+    order: 2;
+  }
+
+  .header-tagline span {
+    font-size: 11px;
+  }
+
+  .header-social-icons {
+    width: 100%;
+    justify-content: center;
+    order: 3;
+  }
+
+  .header-social-icons a {
+    width: 26px;
+    height: 26px;
+    font-size: 11px;
+  }
 }
 
 .th-header {
