@@ -7407,7 +7407,8 @@ ol.wp-block-rss {
 
 .th-header {
     position: relative;
-    z-index: 41
+    z-index: 41;
+        background: #0a0405;
 }
 
 .th-header .icon-btn {
@@ -13079,7 +13080,7 @@ ul.comment-list:has(>.th-comment-item~.th-comment-item):first-child>.th-post-com
 }
 
 .hero-style4 .hero-title {
-    font-size: 80px;
+    font-size: 40px;
     line-height: 1.1;
     margin-bottom: 40px;
     color: #ffffff;
@@ -13087,7 +13088,7 @@ ul.comment-list:has(>.th-comment-item~.th-comment-item):first-child>.th-post-com
 }
 
 .hero-style4 .hero-title .title2 {
-    font-size: 80px;
+    font-size: 40px;
     line-height: 1.1;
     display: inline-block;
     color: #e32801;
@@ -30027,6 +30028,7 @@ body.bg-black2 .share-icons a:hover {
 /* Footer Content */
 .footer-content {
   padding: 70px 0 10px;
+      background: #0a0405;
 }
 
 .footer-column {
@@ -30081,8 +30083,10 @@ body.bg-black2 .share-icons a:hover {
   padding-bottom: 15px;
   margin-bottom: 15px;
 }
-
-.brand-accent {
+.footer-brand img{
+    width: 280px;
+}
+/* .brand-accent {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -30090,7 +30094,7 @@ body.bg-black2 .share-icons a:hover {
   height: 3px;
   background: linear-gradient(90deg, #e32801, transparent);
   border-radius: 3px;
-}
+} */
 
 .footer-title {
   font-size: 16px;
@@ -30770,4 +30774,9 @@ input[type="checkbox"] {
   .checkbox-label {
     font-size: 13px;
   }
+}
+
+
+.header-logo img{
+    width: 220px;
 }
