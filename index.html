@@ -21,14 +21,12 @@
             top: 0 !important;
         }
 
-        /* Always show the language dropdown */
-        #google_translate_element,
-        #google_translate_element * {
-            display: initial !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            pointer-events: auto !important;
-            height: auto !important;
+        /* Hide Google Translate native widget — custom UI used instead */
+        #google_translate_element {
+            display: none !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            overflow: hidden !important;
         }
 
         /* Hide Google Translate top banner */
@@ -711,65 +709,129 @@
                                     <li class="menu-item-has-children" id="catalogue-dropdown">
                                         <a href="#" id="catalogueMenuBtn">Catalogue </a>
                                         <ul class="sub-menu" style="min-width:220px;">
-                                            <li><a href="#" class="catalogue-option" data-catalogue="complete">Complete catalogue   </a></li>
+                                            <li><a href="#" class="catalogue-option" data-catalogue="complete">Complete catalogue</a></li>
                                             <li><a href="#" class="catalogue-option" data-catalogue="new">New edition catalogue</a></li>
                                             <li><a href="#" class="catalogue-option" data-catalogue="price">Price list catalogue</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">In-House Manufacturing Capabilities</a></li>
-
                                 </ul>
                             </nav>
                             <button type="button" class="th-menu-toggle d-block d-lg-none">
                                 <i class="far fa-bars"></i>
                             </button>
-                            <!-- Google Translate Dropdown -->
-                            <div id="google_translate_element"
-                                style="min-width: 140px; display: inline-block; vertical-align: middle; margin-left: 18px;">
+                        </div>
+
+                        <!-- Language Selector Column -->
+                        <div class="col-auto d-none d-lg-flex align-items-center">
+                            <!-- Hidden Google Translate initializer -->
+                            <div id="google_translate_element"></div>
+
+                            <!-- Custom Language Button -->
+                            <div class="custom-lang-wrapper">
+                                <i class="fas fa-globe"></i>
+                                <span class="lang-label" id="langLabel">Language</span>
+                                <select id="customLangSelect" onchange="doGTranslate(this.value);document.getElementById('langLabel').textContent=this.options[this.selectedIndex].text||'Language';" aria-label="Select Language">
+                                    <option value="">Language</option>
+                                    <option value="en|en">English</option>
+                                    <option value="en|hi">हिन्दी</option>
+                                    <option value="en|fr">Français</option>
+                                    <option value="en|de">Deutsch</option>
+                                    <option value="en|es">Español</option>
+                                    <option value="en|ar">العربية</option>
+                                    <option value="en|zh-CN">中文</option>
+                                    <option value="en|ja">日本語</option>
+                                </select>
+                                <i class="fas fa-chevron-down custom-lang-arrow"></i>
                             </div>
+
                             <style>
-                                .goog-te-banner-frame.skiptranslate {
-                                    display: none !important;
-                                }
+                                /* Kill ALL Google Translate native UI */
+                                .goog-te-banner-frame,
+                                .goog-te-banner-frame.skiptranslate,
+                                #goog-gt-tt,
+                                .goog-te-balloon-frame,
+                                .goog-logo-link,
+                                .goog-te-gadget { display: none !important; }
+                                body, html { top: 0 !important; margin-top: 0 !important; }
+                                #google_translate_element { display: none !important; }
 
-                                body {
-                                    top: 0px !important;
+                                .custom-lang-wrapper {
+                                    position: relative;
+                                    display: inline-flex;
+                                    align-items: center;
+                                    gap: 8px;
+                                    background: transparent;
+                                    border: 1.5px solid rgba(255,255,255,0.2);
+                                    border-radius: 6px;
+                                    padding: 0 10px 0 12px;
+                                    height: 38px;
+                                    cursor: pointer;
+                                    transition: all 0.25s ease;
                                 }
-
-                                .goog-te-gadget {
-                                    font-family: inherit !important;
-                                    font-size: 1rem !important;
-                                    color: #fff !important;
+                                .custom-lang-wrapper:hover {
+                                    border-color: #e32801;
+                                    background: rgba(227,40,1,0.08);
+                                    box-shadow: 0 0 0 3px rgba(227,40,1,0.12);
                                 }
-
-                                #google_translate_element select {
-                                    background: #181818;
+                                .custom-lang-wrapper .fa-globe {
+                                    color: #e32801;
+                                    font-size: 14px;
+                                    pointer-events: none;
+                                }
+                                .custom-lang-arrow {
+                                    color: rgba(255,255,255,0.5);
+                                    font-size: 11px;
+                                    pointer-events: none;
+                                    transition: color 0.25s ease;
+                                }
+                                .custom-lang-wrapper:hover .custom-lang-arrow {
+                                    color: #e32801;
+                                }
+                                .custom-lang-wrapper select {
+                                    position: absolute;
+                                    inset: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    opacity: 0;
+                                    cursor: pointer;
+                                    border: none;
+                                    background: transparent;
+                                    font-size: 14px;
+                                }
+                                /* visible label text */
+                                .custom-lang-wrapper .lang-label {
                                     color: #fff;
-                                    border: 1px solid #e32801;
-                                    border-radius: 18px;
-                                    padding: 4px 16px;
-                                    font-size: 1rem;
-                                    margin-left: 8px;
-                                    outline: none;
-                                    min-width: 110px;
-                                }
-
-                                #google_translate_element select option {
-                                    color: #181818;
+                                    font-size: 0.88rem;
+                                    font-weight: 500;
+                                    white-space: nowrap;
+                                    pointer-events: none;
                                 }
                             </style>
+
                             <script type="text/javascript">
                                 function googleTranslateElementInit() {
                                     new google.translate.TranslateElement({
                                         pageLanguage: 'en',
-                                        includedLanguages: 'en,fr,es,de',
-                                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
                                         autoDisplay: false
                                     }, 'google_translate_element');
                                 }
+                                function doGTranslate(lang_pair) {
+                                    if (!lang_pair) return;
+                                    var lang = lang_pair.split('|')[1];
+                                    var selects = document.getElementsByTagName('select');
+                                    for (var i = 0; i < selects.length; i++) {
+                                        if (selects[i].className === 'goog-te-combo') {
+                                            selects[i].value = lang;
+                                            var evt = document.createEvent('HTMLEvents');
+                                            evt.initEvent('change', true, true);
+                                            selects[i].dispatchEvent(evt);
+                                            break;
+                                        }
+                                    }
+                                }
                             </script>
-                            <script type="text/javascript"
-                                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
                         </div>
                         <div class="col-auto d-none d-xl-block">
                             <!-- <div class="car-bottom">
