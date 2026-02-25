@@ -2885,7 +2885,7 @@ textarea.is-invalid {
     border-radius: 5px
 }
 #about-sec{
-    padding: 100px;
+    padding: 62px;
 }
 .icon-btn {
     display: inline-block;
@@ -7365,7 +7365,7 @@ ol.wp-block-rss {
 /* Responsive */
 @media (max-width: 768px) {
   .header-top-bar {
-    padding: 6px 0;
+     padding: 6px 0 !important;
   }
 
   .header-top-content {
@@ -7674,7 +7674,7 @@ ol.wp-block-rss {
 }
 
 .main-menu ul.sub-menu li a:before {
-    content: "";
+    /* content: ""; */
     position: absolute;
     top: 6px;
     left: 10px;
@@ -30780,3 +30780,141 @@ input[type="checkbox"] {
 .header-logo img{
     width: 220px;
 }
+
+
+
+        /* Hide ONLY Google Translate top banner/iframe, NOT the dropdown */
+        .goog-te-banner-frame,
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+            height: 0 !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
+        html {
+            margin-top: 0 !important;
+        }
+
+        body {
+            top: 0 !important;
+        }
+
+        /* Always show the language dropdown */
+        #google_translate_element,
+        #google_translate_element * {
+            display: initial !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            pointer-events: auto !important;
+            height: auto !important;
+        }
+
+        /* Hide Google Translate top banner */
+        .goog-te-banner-frame,
+        #goog-gt-tt,
+        .goog-te-balloon-frame,
+        .goog-te-menu-frame,
+        .goog-tooltip,
+        .goog-tooltip:hover {
+            display: none !important;
+        }
+
+        body {
+            top: 0 !important;
+        }
+
+        /* Always keep logo row and search bar in a single horizontal row, even on mobile */
+        .header-logo .logo-row {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        .header-logo .header-search-bar {
+            margin-left: 32px;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .header-logo .header-search-bar input[type="text"] {
+            padding: 7px 14px;
+            border-radius: 20px 0 0 20px;
+            border: 1px solid #e32801;
+            outline: none;
+            font-size: 1rem;
+            min-width: 120px;
+            background: #181818;
+            color: #fff;
+        }
+
+        .header-logo .header-search-bar button {
+            padding: 7px 16px;
+            border-radius: 0 20px 20px 0;
+            border: 1px solid #e32801;
+            border-left: none;
+            background: #e32801;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .header-logo .header-search-bar button:hover {
+            background: #b82001;
+        }
+
+        .header-logo .logo-row span,
+        .header-logo .logo-row a img {
+            text-align: left;
+            margin-left: 0;
+        }
+
+        .header-logo .logo-row a img {
+            height: 38px !important;
+            max-width: 120px;
+        }
+
+        .header-logo .logo-row span {
+            font-size: 1.4rem !important;
+        }
+    </style>
+    <styl>
+        /* Responsive header logo row */
+        .header-logo .logo-row {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex-wrap: nowrap;
+        }
+
+        @media (max-width: 576px) {
+            .header-logo .logo-row {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .header-logo .logo-row span,
+            .header-logo .logo-row a img {
+                text-align: left;
+                margin-left: 0;
+            }
+
+            .header-logo .logo-row a img {
+                height: 38px !important;
+                max-width: 120px;
+            }
+
+            .header-logo .logo-row span {
+                font-size: 1.4rem !important;
+            }
+        }
+    

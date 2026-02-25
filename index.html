@@ -2,13 +2,149 @@
 <html class="no-js bg-black2" lang="zxx">
 
 <head>
+    <style>
+        /* Hide ONLY Google Translate top banner/iframe, NOT the dropdown */
+        .goog-te-banner-frame,
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+            height: 0 !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
+        html {
+            margin-top: 0 !important;
+        }
+
+        body {
+            top: 0 !important;
+        }
+
+        /* Always show the language dropdown */
+        #google_translate_element,
+        #google_translate_element * {
+            display: initial !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            pointer-events: auto !important;
+            height: auto !important;
+        }
+
+        /* Hide Google Translate top banner */
+        .goog-te-banner-frame,
+        #goog-gt-tt,
+        .goog-te-balloon-frame,
+        .goog-te-menu-frame,
+        .goog-tooltip,
+        .goog-tooltip:hover {
+            display: none !important;
+        }
+
+        body {
+            top: 0 !important;
+        }
+
+        /* Always keep logo row and search bar in a single horizontal row, even on mobile */
+        .header-logo .logo-row {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        .header-logo .header-search-bar {
+            margin-left: 32px;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .header-logo .header-search-bar input[type="text"] {
+            padding: 7px 14px;
+            border-radius: 20px 0 0 20px;
+            border: 1px solid #e32801;
+            outline: none;
+            font-size: 1rem;
+            min-width: 120px;
+            background: #181818;
+            color: #fff;
+        }
+
+        .header-logo .header-search-bar button {
+            padding: 7px 16px;
+            border-radius: 0 20px 20px 0;
+            border: 1px solid #e32801;
+            border-left: none;
+            background: #e32801;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .header-logo .header-search-bar button:hover {
+            background: #b82001;
+        }
+
+        .header-logo .logo-row span,
+        .header-logo .logo-row a img {
+            text-align: left;
+            margin-left: 0;
+        }
+
+        .header-logo .logo-row a img {
+            height: 38px !important;
+            max-width: 120px;
+        }
+
+        .header-logo .logo-row span {
+            font-size: 1.4rem !important;
+        }
+    </style>
+    <style>
+        /* Responsive header logo row */
+        .header-logo .logo-row {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex-wrap: nowrap;
+        }
+
+        @media (max-width: 576px) {
+            .header-logo .logo-row {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .header-logo .logo-row span,
+            .header-logo .logo-row a img {
+                text-align: left;
+                margin-left: 0;
+            }
+
+            .header-logo .logo-row a img {
+                height: 38px !important;
+                max-width: 120px;
+            }
+
+            .header-logo .logo-row span {
+                font-size: 1.4rem !important;
+            }
+        }
+    </style>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Malhotra Engineering work</title>
 
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
 
-   
+
     <meta name="theme-color" content="#ffffff" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
@@ -250,6 +386,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -417,20 +554,113 @@
         <div class="container-fluid">
             <div class="header-top-content">
                 <div class="header-contact-group">
-                    <a href="tel:+919871088444"><i class="fas fa-phone  "></i> +91-9871088444</a>
+                    <a href="tel:+919999871727"><i class="fas fa-phone"></i> +91 9999871727</a>
                     <a href="mailto:magical1960@gmail.com"><i class="fas fa-envelope"></i> magical1960@gmail.com</a>
                 </div>
-                <div class="header-tagline">
+                <!-- <div class="header-tagline">
                     <span id="rotatingTagline">Serving Since 1960 • Engineering Excellence</span>
-                </div>
-                <div class="header-social-icons">
-                    <a href="https://facebook.com" target="_blank" title="Facebook"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a href="https://instagram.com" target="_blank" title="Instagram"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a href="https://whatsapp.com" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div> -->
+                <form class="header-search-bar custom-header-search-bar" action="#" method="get" role="search">
+                    <input type="text" name="q" placeholder="Search by HSN Code/ Manufacturer/ Vehicle/ PartNo." aria-label="Search" />
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <style>
+                    .custom-header-search-bar {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        max-width: 400px;
+                        margin: 0 auto;
+                        height: 45px;
+                        background: rgba(30, 30, 30, 0.55);
+                        border-radius: 32px;
+                        border: 1.5px solid rgba(255, 255, 255, 0.13);
+                        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+                        backdrop-filter: blur(7px);
+                        overflow: hidden;
+                        padding: 0;
+                        transition: border 0.2s, box-shadow 0.2s;
+                        position: relative;
+                    }
+
+                    .custom-header-search-bar:focus-within {
+                        border: 1.5px solid #e32801;
+                        box-shadow: 0 2px 16px rgba(227, 40, 1, 0.10);
+                    }
+
+                    .custom-header-search-bar input[type="text"] {
+                        flex: 1;
+                        padding: 10px 18px 10px 18px;
+                        border: none;
+                        outline: none;
+                        background: transparent;
+                        color: #fff;
+                        font-size: 11px;
+                        border-radius: 32px 0 0 32px;
+                        font-weight: 400;
+                        letter-spacing: 0.01em;
+                        box-shadow: none;
+                    }
+
+                    .custom-header-search-bar input[type="text"]::placeholder {
+                        color: #e0e0e0;
+                        opacity: 1;
+                        font-weight: 300;
+                        letter-spacing: 0.01em;
+                    }
+
+                    .custom-header-search-bar button {
+                        margin-left: 0;
+                        width: 48px;
+                        height: 45px;
+                        min-width: 48px;
+                        min-height: 45px;
+                        border: none;
+                        background: linear-gradient(135deg, #e32801 60%, #ff5733 100%);
+                        color: #fff;
+                        font-size: 1.18rem;
+                        border-radius: 0 32px 32px 0;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        box-shadow: none;
+                        transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+                        position: static;
+                        border-left: 1.5px solid rgba(255, 255, 255, 0.13);
+                    }
+
+                    .custom-header-search-bar button:hover {
+                        background: linear-gradient(135deg, #b82001 60%, #e32801 100%);
+                        box-shadow: 0 4px 16px rgba(227, 40, 1, 0.18);
+                        transform: scale(1.04);
+                    }
+
+                    @media (max-width: 576px) {
+                        .custom-header-search-bar {
+                            max-width: 98vw;
+                            min-width: 0;
+                        }
+
+                        .custom-header-search-bar input[type="text"] {
+                            font-size: 0.98rem;
+                            padding: 8px 10px 8px 10px;
+                        }
+
+                        .custom-header-search-bar button {
+                            width: 38px;
+                            height: 38px;
+                            min-width: 38px;
+                            min-height: 38px;
+                            font-size: 1rem;
+                        }
+                    }
+                </style>
+                <div class="header-contact-btn">
+                    <a href="contact.html" class="th-btn sm"
+                        style="padding: 14px 11px; font-size: 1rem; font-weight: 600; background: #e32801; color: #fff; border-radius: 22px; border: none;">Contact
+                        Us <i class="fas fa-arrow-up-right"></i></a>
                 </div>
             </div>
         </div>
@@ -444,10 +674,22 @@
                         <div class="col-auto">
                             <div class="header-left-wrapper">
                                 <div class="header-logo">
-                                    <a href="index.html">
-                                        <img src="assets/images/motojet-LOGO.png" alt="malhotra" />
-                                       
-                                    </a>
+                                    <div class="logo-row">
+                                        <span
+                                            style="font-size: 2rem; font-weight: 700; color: #e32801; white-space: nowrap;">Malhotra
+                                            Work</span>
+                                        <a href="index.html" style="display: flex; align-items: center;">
+                                            <img src="assets/images/motojet-LOGO.png" alt="malhotra"
+                                                style="height: 48px; width: auto; display: block;" />
+                                        </a>
+                                        <a href="index.html" style="display: flex; align-items: center;">
+                                            <img src="assets/images/logo-3.png" alt="Logo 2"
+                                                style="height: 48px; width: auto; display: block;" />
+                                        </a>
+                                        <!-- <a href="index.html" style="display: flex; align-items: center;">
+                                            <img src="assets/images/motojet-LOGO.png" alt="Logo 3" style="height: 48px; width: auto; display: block;" />
+                                        </a> -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -457,30 +699,82 @@
                                     <li><a href="index.html">Home</a></li>
                                     <li><a href="about.html">About Us</a></li>
                                     <li class="menu-item-has-children">
-                                        <a href="our-products.html">Products</a>
+                                        <a href="our-products.html">All Category</a>
                                         <ul class="sub-menu">
-                                            <li><a href="our-products.html?category=parts">Parts</a></li>
-                                            <li><a href="our-products.html?category=wheels">Wheels</a></li>
-                                            <li><a href="our-products.html?category=engine">Engine</a></li>
-                                            <li><a href="our-products.html?category=suspension">Suspension</a></li>
+                                            <li><a href="our-products.html">Wheel Cylinder Assy.</a></li>
+                                            <li><a href="our-products.html">Master Cylinder Assy.</a></li>
+                                            <li><a href="our-products.html">Clutch Cylinder Assy.</a></li>
+                                            <li><a href="our-products.html">Slave Cylinder Assy.</a></li>
+                                            <li><a href="category.html">more category.....</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="assets/images/MAGICAL CATALOUGE 13.10.2025.pdf"
-                                            target="_blank">Catalogue</a></li>
-                                    <li><a href="career.html">Careers</a></li>
+                                    <li class="menu-item-has-children" id="catalogue-dropdown">
+                                        <a href="#" id="catalogueMenuBtn">Catalogue </a>
+                                        <ul class="sub-menu" style="min-width:220px;">
+                                            <li><a href="#" class="catalogue-option" data-catalogue="complete">Complete catalogue   </a></li>
+                                            <li><a href="#" class="catalogue-option" data-catalogue="new">New edition catalogue</a></li>
+                                            <li><a href="#" class="catalogue-option" data-catalogue="price">Price list catalogue</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">In-House Manufacturing Capabilities</a></li>
 
                                 </ul>
                             </nav>
                             <button type="button" class="th-menu-toggle d-block d-lg-none">
                                 <i class="far fa-bars"></i>
                             </button>
+                            <!-- Google Translate Dropdown -->
+                            <div id="google_translate_element"
+                                style="min-width: 140px; display: inline-block; vertical-align: middle; margin-left: 18px;">
+                            </div>
+                            <style>
+                                .goog-te-banner-frame.skiptranslate {
+                                    display: none !important;
+                                }
+
+                                body {
+                                    top: 0px !important;
+                                }
+
+                                .goog-te-gadget {
+                                    font-family: inherit !important;
+                                    font-size: 1rem !important;
+                                    color: #fff !important;
+                                }
+
+                                #google_translate_element select {
+                                    background: #181818;
+                                    color: #fff;
+                                    border: 1px solid #e32801;
+                                    border-radius: 18px;
+                                    padding: 4px 16px;
+                                    font-size: 1rem;
+                                    margin-left: 8px;
+                                    outline: none;
+                                    min-width: 110px;
+                                }
+
+                                #google_translate_element select option {
+                                    color: #181818;
+                                }
+                            </style>
+                            <script type="text/javascript">
+                                function googleTranslateElementInit() {
+                                    new google.translate.TranslateElement({
+                                        pageLanguage: 'en',
+                                        includedLanguages: 'en,fr,es,de',
+                                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                                        autoDisplay: false
+                                    }, 'google_translate_element');
+                                }
+                            </script>
+                            <script type="text/javascript"
+                                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
                         </div>
                         <div class="col-auto d-none d-xl-block">
-                            <div class="car-bottom">
-
-                                <a class="th-btn sm" href="contact.html">Contact Us <i
-                                        class="fas fa-arrow-up-right"></i></a>
-                            </div>
+                            <!-- <div class="car-bottom">
+                                ...search bar removed as per instructions...
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -558,22 +852,30 @@
                             <div class="row gy-4 gx-40 align-items-center">
                                 <div class="col-xl-6 col-lg-7">
                                     <div class="hero-style4">
-                                        <div class="hero-badge slideinup" data-ani="slideinup" data-ani-delay="0.1s" style="animation-delay: 0.1s; display: inline-block; background: #e32801; color: white; padding: 8px 20px; border-radius: 50px; font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 15px;">
+                                        <div class="hero-badge slideinup" data-ani="slideinup" data-ani-delay="0.1s"
+                                            style="animation-delay: 0.1s; display: inline-block; background: #e32801; color: white; padding: 8px 20px; border-radius: 50px; font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 15px;">
                                             ⭐ INDUSTRY LEADER SINCE 1960
                                         </div>
-                                        <span class="hero4-sub-title slideinup"
-                                            data-ani="slideinup" data-ani-delay="0.2s"
-                                            style="animation-delay: 0.2s;">Precision • Performance • Reliability</span>
+                                        <span class="hero4-sub-title slideinup" data-ani="slideinup"
+                                            data-ani-delay="0.2s" style="animation-delay: 0.2s;">Precision • Performance
+                                            • Reliability</span>
                                         <h1 class="hero-title slideinup" data-ani="slideinup" data-ani-delay="0.4s"
-                                            style="animation-delay: 0.4s;">Premium Hydraulic <span class="title2">Brake Systems</span>
+                                            style="animation-delay: 0.4s;">Premium Hydraulic <span class="title2">Brake
+                                                Systems</span>
                                         </h1>
-                                        <p class="hero-desc slideinup" data-ani="slideinup" data-ani-delay="0.6s" style="animation-delay: 0.6s; font-size: 16px; line-height: 1.6; color: #d0d0d0; margin: 20px 0 30px 0;">
-                                            Engineered for excellence with over 65 years of expertise. Trusted by global automotive manufacturers for hydraulic brake components that deliver superior safety and durability.
+                                        <p class="hero-desc slideinup" data-ani="slideinup" data-ani-delay="0.6s"
+                                            style="animation-delay: 0.6s; font-size: 16px; line-height: 1.6; color: #d0d0d0; margin: 20px 0 30px 0;">
+                                            Engineered for excellence with over 65 years of expertise. Trusted by global
+                                            automotive manufacturers for hydraulic brake components that deliver
+                                            superior safety and durability.
                                         </p>
-                                        <div class="btn-group justify-content-start gap-3 slideinup" data-ani="slideinup"
-                                            data-ani-delay="0.8s" style="animation-delay: 0.8s;">
-                                            <a href="contact.html" class="th-btn style2">CONTACT US <i class="fas fa-arrow-up-right"></i></a>
-                                            <a href="our-products.html?category=brake" class="th-btn style3 border-style">EXPLORE PRODUCTS <i class="fas fa-arrow-up-right"></i></a>
+                                        <div class="btn-group justify-content-start gap-3 slideinup"
+                                            data-ani="slideinup" data-ani-delay="0.8s" style="animation-delay: 0.8s;">
+                                            <a href="contact.html" class="th-btn style2">CONTACT US <i
+                                                    class="fas fa-arrow-up-right"></i></a>
+                                            <a href="our-products.html?category=brake"
+                                                class="th-btn style3 border-style">EXPLORE PRODUCTS <i
+                                                    class="fas fa-arrow-up-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -591,22 +893,30 @@
                             <div class="row gy-4 gx-40 align-items-center">
                                 <div class="col-xl-6 col-lg-7">
                                     <div class="hero-style4">
-                                        <div class="hero-badge slideinup" data-ani="slideinup" data-ani-delay="0.1s" style="animation-delay: 0.1s; display: inline-block; background: #e32801; color: white; padding: 8px 20px; border-radius: 50px; font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 15px;">
+                                        <div class="hero-badge slideinup" data-ani="slideinup" data-ani-delay="0.1s"
+                                            style="animation-delay: 0.1s; display: inline-block; background: #e32801; color: white; padding: 8px 20px; border-radius: 50px; font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 15px;">
                                             ⭐ 65+ YEARS OF EXCELLENCE
                                         </div>
-                                        <span class="hero4-sub-title slideinup"
-                                            data-ani="slideinup" data-ani-delay="0.2s"
-                                            style="animation-delay: 0.2s;">Durability • Innovation • Excellence</span>
+                                        <span class="hero4-sub-title slideinup" data-ani="slideinup"
+                                            data-ani-delay="0.2s" style="animation-delay: 0.2s;">Durability • Innovation
+                                            • Excellence</span>
                                         <h1 class="hero-title slideinup" data-ani="slideinup" data-ani-delay="0.4s"
-                                            style="animation-delay: 0.4s;">Advanced Suspension <span class="title2">Components</span>
+                                            style="animation-delay: 0.4s;">Advanced Suspension <span
+                                                class="title2">Components</span>
                                         </h1>
-                                        <p class="hero-desc slideinup" data-ani="slideinup" data-ani-delay="0.6s" style="animation-delay: 0.6s; font-size: 16px; line-height: 1.6; color: #d0d0d0; margin: 20px 0 30px 0;">
-                                            Since 1960, Malhotra Engineering has been delivering cutting-edge suspension solutions. Our precision-engineered components ensure optimal vehicle performance and passenger safety.
+                                        <p class="hero-desc slideinup" data-ani="slideinup" data-ani-delay="0.6s"
+                                            style="animation-delay: 0.6s; font-size: 16px; line-height: 1.6; color: #d0d0d0; margin: 20px 0 30px 0;">
+                                            Since 1960, Malhotra Engineering has been delivering cutting-edge suspension
+                                            solutions. Our precision-engineered components ensure optimal vehicle
+                                            performance and passenger safety.
                                         </p>
-                                        <div class="btn-group justify-content-start gap-3 slideinup" data-ani="slideinup"
-                                            data-ani-delay="0.8s" style="animation-delay: 0.8s;">
-                                            <a href="contact.html" class="th-btn style2">CONTACT US <i class="fas fa-arrow-up-right"></i></a>
-                                            <a href="our-products.html?category=suspension" class="th-btn style3 border-style">EXPLORE PRODUCTS <i class="fas fa-arrow-up-right"></i></a>
+                                        <div class="btn-group justify-content-start gap-3 slideinup"
+                                            data-ani="slideinup" data-ani-delay="0.8s" style="animation-delay: 0.8s;">
+                                            <a href="contact.html" class="th-btn style2">CONTACT US <i
+                                                    class="fas fa-arrow-up-right"></i></a>
+                                            <a href="our-products.html?category=suspension"
+                                                class="th-btn style3 border-style">EXPLORE PRODUCTS <i
+                                                    class="fas fa-arrow-up-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -624,22 +934,29 @@
                             <div class="row gy-4 gx-40 align-items-center">
                                 <div class="col-xl-6 col-lg-7">
                                     <div class="hero-style4">
-                                        <div class="hero-badge slideinup" data-ani="slideinup" data-ani-delay="0.1s" style="animation-delay: 0.1s; display: inline-block; background: #e32801; color: white; padding: 8px 20px; border-radius: 50px; font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 15px;">
+                                        <div class="hero-badge slideinup" data-ani="slideinup" data-ani-delay="0.1s"
+                                            style="animation-delay: 0.1s; display: inline-block; background: #e32801; color: white; padding: 8px 20px; border-radius: 50px; font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 15px;">
                                             ⭐ FOUNDED 1960
                                         </div>
-                                        <span class="hero4-sub-title slideinup"
-                                            data-ani="slideinup" data-ani-delay="0.2s"
-                                            style="animation-delay: 0.2s;">Precision Engineering • Global Trust</span>
+                                        <span class="hero4-sub-title slideinup" data-ani="slideinup"
+                                            data-ani-delay="0.2s" style="animation-delay: 0.2s;">Precision Engineering •
+                                            Global Trust</span>
                                         <h1 class="hero-title slideinup" data-ani="slideinup" data-ani-delay="0.4s"
-                                            style="animation-delay: 0.4s;">Your Trusted Partner in <span class="title2">Automotive Excellence</span>
+                                            style="animation-delay: 0.4s;">Your Trusted Partner in <span
+                                                class="title2">Automotive Excellence</span>
                                         </h1>
-                                        <p class="hero-desc slideinup" data-ani="slideinup" data-ani-delay="0.6s" style="animation-delay: 0.6s; font-size: 16px; line-height: 1.6; color: #d0d0d0; margin: 20px 0 30px 0;">
-                                            For 65 years, Malhotra Engineering has been the benchmark for quality and reliability. Specializing in hydraulic brake systems, suspension components, and precision-engineered parts for global markets.
+                                        <p class="hero-desc slideinup" data-ani="slideinup" data-ani-delay="0.6s"
+                                            style="animation-delay: 0.6s; font-size: 16px; line-height: 1.6; color: #d0d0d0; margin: 20px 0 30px 0;">
+                                            For 65 years, Malhotra Engineering has been the benchmark for quality and
+                                            reliability. Specializing in hydraulic brake systems, suspension components,
+                                            and precision-engineered parts for global markets.
                                         </p>
-                                        <div class="btn-group justify-content-start gap-3 slideinup" data-ani="slideinup"
-                                            data-ani-delay="0.8s" style="animation-delay: 0.8s;">
-                                            <a href="about.html" class="th-btn style2">LEARN MORE <i class="fas fa-arrow-up-right"></i></a>
-                                            <a href="contact.html" class="th-btn style3 border-style">GET IN TOUCH <i class="fas fa-arrow-up-right"></i></a>
+                                        <div class="btn-group justify-content-start gap-3 slideinup"
+                                            data-ani="slideinup" data-ani-delay="0.8s" style="animation-delay: 0.8s;">
+                                            <a href="about.html" class="th-btn style2">LEARN MORE <i
+                                                    class="fas fa-arrow-up-right"></i></a>
+                                            <a href="contact.html" class="th-btn style3 border-style">GET IN TOUCH <i
+                                                    class="fas fa-arrow-up-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -709,27 +1026,27 @@
         </div>
     </div>
 
-    <section class="category-sec-1 position-relative space arrow-wrap"
-        style="background: linear-gradient(135deg, rgba(227, 39, 1, 0) 0%, rgba(227, 40, 1, 0.02) 100%); */
+    <section class="category-sec-1 position-relative space arrow-wrap" style="background: linear-gradient(135deg, rgba(227, 39, 1, 0) 0%, rgba(227, 40, 1, 0.02) 100%); */
     /* border-top: 3px solid #e32801; */
     /* border-bottom: 3px solid #e32801; */
     padding-top: 22px;
-    padding-bottom: 4px;">
+    padding-bottom: 4px;    padding-top: 70px;">
         <div class="container-fluid">
-            
+
             <div class="container">
-            <div class="row justify-content-lg-between justify-content-center align-items-end">
-                <div class="col-lg-6">
-                    <div class="title-area text-center text-lg-start">
-                        <h2 class="sec-title">Browse by Category</h2>
+                <div class="row justify-content-lg-between justify-content-center align-items-end">
+                    <div class="col-lg-6">
+                        <div class="title-area text-center text-lg-start">
+                            <h2 class="sec-title">Browse by Category</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-auto d-none d-lg-block">
+                        <div class="sec-btn"><a href="category.html" class="th-btn bg-black"
+                                style="border: 1px solid #FFF;">Explore All Categories
+                                <i class="fas fa-arrow-up-right"></i></a></div>
                     </div>
                 </div>
-                <div class="col-lg-auto d-none d-lg-block">
-                    <div class="sec-btn"><a href="inventory-listing.html" class="th-btn bg-black" style="border: 1px solid #FFF;">Explore All Vehicles
-                            <i class="fas fa-arrow-up-right"></i></a></div>
-                </div>
             </div>
-        </div>
             <div class="slider-area">
                 <div class="swiper th-slider swiper-initialized swiper-horizontal" id="categorySlider1"
                     data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"400":{"slidesPerView":"2"},"768":{"slidesPerView":"3"},"992":{"slidesPerView":"4"},"1200":{"slidesPerView":"5"}, "1300":{"slidesPerView":"6"}}}'>
@@ -742,10 +1059,12 @@
                             style="width: 200px; margin-right: 24px">
                             <div class="category-card">
                                 <div class="box-icon">
-                                    <img src="assets/images/new-bike-1.png" alt="Image" />
+                                    <a href="category.html">
+                                        <img src="assets/images/new-bike-1.png" alt="Image" />
+                                    </a>
                                 </div>
                                 <h3 class="box-title">
-                                    <a href="">COROLLA</a>
+                                    <a href="category.html">COROLLA</a>
                                 </h3>
                             </div>
                         </div>
@@ -753,10 +1072,12 @@
                             style="width: 200px; margin-right: 24px">
                             <div class="category-card">
                                 <div class="box-icon">
-                                    <img src="assets/images/new-bike-1.png" alt="Image" />
+                                    <a href="category.html">
+                                        <img src="assets/images/new-bike-1.png" alt="Image" />
+                                    </a>
                                 </div>
                                 <h3 class="box-title">
-                                    <a href="">COROLLA</a>
+                                    <a href="category.html">COROLLA</a>
                                 </h3>
                             </div>
                         </div>
@@ -764,10 +1085,12 @@
                             style="width: 200px; margin-right: 24px">
                             <div class="category-card">
                                 <div class="box-icon">
-                                    <img src="assets/images/new-bike-1.png" alt="Image" />
+                                    <a href="category.html">
+                                        <img src="assets/images/new-bike-1.png" alt="Image" />
+                                    </a>
                                 </div>
                                 <h3 class="box-title">
-                                    <a href="">COROLLA</a>
+                                    <a href="category.html">COROLLA</a>
                                 </h3>
                             </div>
                         </div>
@@ -775,10 +1098,12 @@
                             style="width: 200px; margin-right: 24px">
                             <div class="category-card">
                                 <div class="box-icon">
-                                    <img src="assets/images/new-bike-1.png" alt="Image" />
+                                    <a href="category.html">
+                                        <img src="assets/images/new-bike-1.png" alt="Image" />
+                                    </a>
                                 </div>
                                 <h3 class="box-title">
-                                    <a href="">COROLLA</a>
+                                    <a href="category.html">COROLLA</a>
                                 </h3>
                             </div>
                         </div>
@@ -786,10 +1111,12 @@
                             style="width: 200px; margin-right: 24px">
                             <div class="category-card">
                                 <div class="box-icon">
-                                    <img src="assets/images/new-bike-1.png" alt="Image" />
+                                    <a href="category.html">
+                                        <img src="assets/images/new-bike-1.png" alt="Image" />
+                                    </a>
                                 </div>
                                 <h3 class="box-title">
-                                    <a href="">COROLLA</a>
+                                    <a href="category.html">COROLLA</a>
                                 </h3>
                             </div>
                         </div>
@@ -797,10 +1124,12 @@
                             style="width: 200px; margin-right: 24px">
                             <div class="category-card">
                                 <div class="box-icon">
-                                    <img src="assets/images/new-bike-1.png" alt="Image" />
+                                    <a href="category.html">
+                                        <img src="assets/images/new-bike-1.png" alt="Image" />
+                                    </a>
                                 </div>
                                 <h3 class="box-title">
-                                    <a href="">COROLLA</a>
+                                    <a href="category.html">COROLLA</a>
                                 </h3>
                             </div>
                         </div>
@@ -808,10 +1137,12 @@
                             style="width: 200px; margin-right: 24px">
                             <div class="category-card">
                                 <div class="box-icon">
-                                    <img src="assets/images/new-bike-1.png" alt="Image" />
+                                    <a href="category.html">
+                                        <img src="assets/images/new-bike-1.png" alt="Image" />
+                                    </a>
                                 </div>
                                 <h3 class="box-title">
-                                    <a href="">COROLLA</a>
+                                    <a href="category.html">COROLLA</a>
                                 </h3>
                             </div>
                         </div>
@@ -835,11 +1166,12 @@
                 <div class="col-lg-6">
                     <div class="title-area text-center text-lg-start">
                         <h2 class="sec-title">Browse by Vehicle</h2>
-                    
+
                     </div>
                 </div>
                 <div class="col-lg-auto d-none d-lg-block">
-                    <div class="sec-btn"><a href="inventory-listing.html" class="th-btn bg-black" style="border: 1px solid #FFF;">Explore All Vehicles
+                    <div class="sec-btn"><a href="vehicles.html" class="th-btn bg-black"
+                            style="border: 1px solid #FFF;">Explore All Vehicles
                             <i class="fas fa-arrow-up-right"></i></a></div>
                 </div>
             </div>
@@ -853,124 +1185,128 @@
                         style="transition-duration: 0ms; transform: translate3d(-2896.88px, 0px, 0px); transition-delay: 0ms;">
 
 
-
-
-
-
-
-                      
                         <div class="swiper-slide" role="group" aria-label="12 / 12" data-swiper-slide-index="11"
                             style="width: 362.25px; margin-right: 24px;">
                             <div class="gallery-card gsap-cursor">
-                                <div class="gallery-img"><img src="assets/img/gallery/gallery-1-3.jpg"
-                                        alt="gallery image">
+                                <div class="gallery-img">
+                                    <a href="vehicles.html">
+                                        <img src="assets/img/gallery/gallery-1-3.jpg" alt="gallery image">
+                                    </a>
                                     <div class="gallery-content">
                                         <h2 class="box-title"><a href="our-products.html">Genesis</a></h2>
-                                    
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                          <div class="swiper-slide" role="group" aria-label="12 / 12" data-swiper-slide-index="11"
+                        <div class="swiper-slide" role="group" aria-label="12 / 12" data-swiper-slide-index="11"
                             style="width: 362.25px; margin-right: 24px;">
                             <div class="gallery-card gsap-cursor">
-                                <div class="gallery-img"><img src="assets/img/gallery/gallery-1-3.jpg"
-                                        alt="gallery image">
+                                <div class="gallery-img">
+                                    <a href="vehicles.html">
+                                        <img src="assets/img/gallery/gallery-1-3.jpg" alt="gallery image">
+                                    </a>
                                     <div class="gallery-content">
                                         <h2 class="box-title"><a href="our-products.html">Genesis</a></h2>
-                                    
                                     </div>
                                 </div>
                             </div>
                         </div>
-                          <div class="swiper-slide" role="group" aria-label="12 / 12" data-swiper-slide-index="11"
+                        <div class="swiper-slide" role="group" aria-label="12 / 12" data-swiper-slide-index="11"
                             style="width: 362.25px; margin-right: 24px;">
                             <div class="gallery-card gsap-cursor">
-                                <div class="gallery-img"><img src="assets/img/gallery/gallery-1-3.jpg"
-                                        alt="gallery image">
+                                <div class="gallery-img">
+                                    <a href="vehicles.html">
+                                        <img src="assets/img/gallery/gallery-1-3.jpg" alt="gallery image">
+                                    </a>
                                     <div class="gallery-content">
                                         <h2 class="box-title"><a href="our-products.html">Genesis</a></h2>
-                                    
                                     </div>
                                 </div>
                             </div>
                         </div>
-                          <div class="swiper-slide" role="group" aria-label="12 / 12" data-swiper-slide-index="11"
+                        <div class="swiper-slide" role="group" aria-label="12 / 12" data-swiper-slide-index="11"
                             style="width: 362.25px; margin-right: 24px;">
                             <div class="gallery-card gsap-cursor">
-                                <div class="gallery-img"><img src="assets/img/gallery/gallery-1-3.jpg"
-                                        alt="gallery image">
+                                <div class="gallery-img">
+                                    <a href="vehicles.html">
+                                        <img src="assets/img/gallery/gallery-1-3.jpg" alt="gallery image">
+                                    </a>
                                     <div class="gallery-content">
                                         <h2 class="box-title"><a href="our-products.html">Genesis</a></h2>
-                                    
                                     </div>
                                 </div>
                             </div>
                         </div>
-                          <div class="swiper-slide" role="group" aria-label="12 / 12" data-swiper-slide-index="11"
+                        <div class="swiper-slide" role="group" aria-label="12 / 12" data-swiper-slide-index="11"
                             style="width: 362.25px; margin-right: 24px;">
                             <div class="gallery-card gsap-cursor">
-                                <div class="gallery-img"><img src="assets/img/gallery/gallery-1-3.jpg"
-                                        alt="gallery image">
+                                <div class="gallery-img">
+                                    <a href="vehicles.html">
+                                        <img src="assets/img/gallery/gallery-1-3.jpg" alt="gallery image">
+                                    </a>
                                     <div class="gallery-content">
                                         <h2 class="box-title"><a href="our-products.html">Genesis</a></h2>
-                                    
                                     </div>
                                 </div>
                             </div>
                         </div>
-                          <div class="swiper-slide" role="group" aria-label="12 / 12" data-swiper-slide-index="11"
+                        <div class="swiper-slide" role="group" aria-label="12 / 12" data-swiper-slide-index="11"
                             style="width: 362.25px; margin-right: 24px;">
                             <div class="gallery-card gsap-cursor">
-                                <div class="gallery-img"><img src="assets/img/gallery/gallery-1-3.jpg"
-                                        alt="gallery image">
+                                <div class="gallery-img">
+                                    <a href="vehicles.html">
+                                        <img src="assets/img/gallery/gallery-1-3.jpg" alt="gallery image">
+                                    </a>
                                     <div class="gallery-content">
                                         <h2 class="box-title"><a href="our-products.html">Genesis</a></h2>
-                                    
                                     </div>
                                 </div>
                             </div>
                         </div>
-                          <div class="swiper-slide" role="group" aria-label="12 / 12" data-swiper-slide-index="11"
+                        <div class="swiper-slide" role="group" aria-label="12 / 12" data-swiper-slide-index="11"
                             style="width: 362.25px; margin-right: 24px;">
                             <div class="gallery-card gsap-cursor">
-                                <div class="gallery-img"><img src="assets/img/gallery/gallery-1-3.jpg"
-                                        alt="gallery image">
+                                <div class="gallery-img">
+                                    <a href="vehicles.html">
+                                        <img src="assets/img/gallery/gallery-1-3.jpg" alt="gallery image">
+                                    </a>
                                     <div class="gallery-content">
                                         <h2 class="box-title"><a href="our-products.html">Genesis</a></h2>
-                                    
                                     </div>
                                 </div>
                             </div>
                         </div>
-                          <div class="swiper-slide" role="group" aria-label="12 / 12" data-swiper-slide-index="11"
+                        <div class="swiper-slide" role="group" aria-label="12 / 12" data-swiper-slide-index="11"
                             style="width: 362.25px; margin-right: 24px;">
                             <div class="gallery-card gsap-cursor">
-                                <div class="gallery-img"><img src="assets/img/gallery/gallery-1-3.jpg"
-                                        alt="gallery image">
+                                <div class="gallery-img">
+                                    <a href="vehicles.html">
+                                        <img src="assets/img/gallery/gallery-1-3.jpg" alt="gallery image">
+                                    </a>
                                     <div class="gallery-content">
                                         <h2 class="box-title"><a href="our-products.html">Genesis</a></h2>
-                                    
                                     </div>
                                 </div>
                             </div>
                         </div>
-                          <div class="swiper-slide" role="group" aria-label="12 / 12" data-swiper-slide-index="11"
+                        <div class="swiper-slide" role="group" aria-label="12 / 12" data-swiper-slide-index="11"
                             style="width: 362.25px; margin-right: 24px;">
                             <div class="gallery-card gsap-cursor">
-                                <div class="gallery-img"><img src="assets/img/gallery/gallery-1-3.jpg"
-                                        alt="gallery image">
+                                <div class="gallery-img">
+                                    <a href="vehicles.html">
+                                        <img src="assets/img/gallery/gallery-1-3.jpg" alt="gallery image">
+                                    </a>
                                     <div class="gallery-content">
                                         <h2 class="box-title"><a href="our-products.html">Genesis</a></h2>
-                                    
                                     </div>
                                 </div>
                             </div>
                         </div>
-                     
-                       
-                        
-                        
+
+
+
+
                     </div>
                     <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                 </div>
@@ -985,21 +1321,22 @@
         <div class="shape-mockup moving" style="bottom: 0px; left: 3%;"><img
                 src="assets/img/shape/features-icon-bottom-5.png" alt="shape"></div>
         <div class="container-fluid">
-          <div class="container">
-            <div class="row justify-content-lg-between justify-content-center align-items-end">
-                <div class="col-lg-6">
-                    <div class="title-area text-center text-lg-start">
-                        <h2 class="sec-title">Browse by Brands</h2>
-                    
+            <div class="container">
+                <div class="row justify-content-lg-between justify-content-center align-items-end">
+                    <div class="col-lg-6">
+                        <div class="title-area text-center text-lg-start">
+                            <h2 class="sec-title">Browse by Brands</h2>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-auto d-none d-lg-block">
+                        <div class="sec-btn"><a href="brands.html" class="th-btn bg-black"
+                                style="border: 1px solid #FFF;">Explore All Brands
+                                <i class="fas fa-arrow-up-right"></i></a></div>
                     </div>
                 </div>
-                <div class="col-lg-auto d-none d-lg-block">
-                    <div class="sec-btn"><a href="inventory-listing.html" class="th-btn bg-black" style="border: 1px solid #FFF;">Explore All Vehicles
-                            <i class="fas fa-arrow-up-right"></i></a></div>
-                </div>
             </div>
-        </div>
-         <div class="row">
+            <div class="row">
                 <div class="col-12">
                     <div class="swiper th-slider swiper-initialized swiper-horizontal" id="brand-slider-1"
                         data-slider-options="{&quot;breakpoints&quot;:{&quot;0&quot;:{&quot;slidesPerView&quot;:2},&quot;576&quot;:{&quot;slidesPerView&quot;:&quot;2&quot;},&quot;768&quot;:{&quot;slidesPerView&quot;:&quot;3&quot;},&quot;992&quot;:{&quot;slidesPerView&quot;:&quot;4&quot;},&quot;1200&quot;:{&quot;slidesPerView&quot;:&quot;5&quot;},&quot;1400&quot;:{&quot;slidesPerView&quot;:&quot;6&quot;}}}">
@@ -1092,7 +1429,7 @@
                             </div>
                             <div class="car-content">
                                 <div class="media-body">
-                                    <h3 class="box-title"><a href="">COROLLA</a></h3>
+                                    <h3 class="box-title"><a href="our-products.html">COROLLA</a></h3>
                                 
                                     <p class="box-text"><span>TOYOTA</p>
                                 </div>
@@ -1113,7 +1450,7 @@
                             </div>
                             <div class="car-content">
                                 <div class="media-body">
-                                    <h3 class="box-title"><a href="">COROLLA</a></h3>
+                                    <h3 class="box-title"><a href="our-products.html">COROLLA</a></h3>
                                   
                                     <p class="box-text"><span>TOYOTA</p>
                                 </div>
@@ -1133,7 +1470,7 @@
                             </div>
                             <div class="car-content">
                                 <div class="media-body">
-                                    <h3 class="box-title"><a href="">COROLLA</a></h3>
+                                    <h3 class="box-title"><a href="our-products.html">COROLLA</a></h3>
                            
                                     <p class="box-text"><span>TOYOTA</p>
                                 </div>
@@ -1153,7 +1490,7 @@
                             </div>
                             <div class="car-content">
                                 <div class="media-body">
-                                    <h3 class="box-title"><a href="">COROLLA</a></h3>
+                                    <h3 class="box-title"><a href="our-products.html">COROLLA</a></h3>
                          
                                     <p class="box-text"><span>TOYOTA</p>
                                 </div>
@@ -1173,7 +1510,7 @@
                             </div>
                             <div class="car-content">
                                 <div class="media-body">
-                                    <h3 class="box-title"><a href="">COROLLA</a></h3>
+                                    <h3 class="box-title"><a href="our-products.html">COROLLA</a></h3>
                            
                                     <p class="box-text"><span>TOYOTA</p>
                                 </div>
@@ -1193,7 +1530,7 @@
                             </div>
                             <div class="car-content">
                                 <div class="media-body">
-                                    <h3 class="box-title"><a href="">COROLLA</a></h3>
+                                    <h3 class="box-title"><a href="our-products.html">COROLLA</a></h3>
                                 
                                     <p class="box-text"><span>TOYOTA</p>
                                 </div>
@@ -1213,7 +1550,7 @@
                             </div>
                             <div class="car-content">
                                 <div class="media-body">
-                                    <h3 class="box-title"><a href="">COROLLA</a></h3>
+                                    <h3 class="box-title"><a href="our-products.html">COROLLA</a></h3>
                             
                                     <p class="box-text"><span>TOYOTA</p>
                                 </div>
@@ -1233,7 +1570,7 @@
                             </div>
                             <div class="car-content">
                                 <div class="media-body">
-                                    <h3 class="box-title"><a href="">COROLLA</a></h3>
+                                    <h3 class="box-title"><a href="our-products.html">COROLLA</a></h3>
                               
                                     <p class="box-text"><span>TOYOTA</p>
                                 </div>
@@ -1517,7 +1854,7 @@
         </div>
     </div> -->
 
-   
+
 
 
 
@@ -1604,9 +1941,9 @@
     </section>
 
 
-<div class="map-wrapper">
-    <div id="vmap"></div>
-  </div>
+    <div class="map-wrapper">
+        <div id="vmap"></div>
+    </div>
 
 
     <!-- Modern Dark Theme Footer -->
@@ -1622,8 +1959,8 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-column footer-col-brand">
                             <div class="footer-brand">
-                            
-                                 <img src="assets/images/motojet-LOGO.png" alt="malhotra" />
+
+                                <img src="assets/images/motojet-LOGO.png" alt="malhotra" />
                                 <div class="brand-accent"></div>
                             </div>
                             <p class="footer-desc">
@@ -1633,7 +1970,7 @@
                             <div class="footer-social mt-5">
                                 <a href="#" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
-                                <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-link" title="Whatsapp"><i class="fab fa-whatsapp"></i></a>
                                 <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
@@ -1651,7 +1988,7 @@
                                 <li><a href="about.html"><i class="fas fa-chevron-right"></i>About Us</a></li>
                                 <!-- <li><a href="our-products.html"><i class="fas fa-chevron-right"></i>Products</a></li> -->
                                 <li><a href="contact.html"><i class="fas fa-chevron-right"></i>Contact Us</a></li>
-                                <li><a href="careers.html"><i class="fas fa-chevron-right"></i>Careers</a></li>
+                                <li><a href="career.html"><i class="fas fa-chevron-right"></i>Careers</a></li>
                                 <li><a href="assets/images/MAGICAL CATALOUGE 13.10.2025.pdf" target="_blank"><i
                                             class="fas fa-chevron-right"></i>Catalogue</a></li>
                             </ul>
@@ -1695,11 +2032,12 @@
                                 </div>
                                 <div class="contact-item">
                                     <div class="contact-icon">
-                                        <i class="fas fa-phone-alt"></i>
+                                        <i class="fas fa-phone"></i>
                                     </div>
                                     <div class="contact-details">
                                         <p class="contact-label">Phone</p>
-                                        <p class="contact-text"><a href="tel:+911234567890">+91 123-456-7890</a></p>
+                                        <p class="contact-text"><a href="tel:+919999871727">+91 9999871727</a><br><a href="tel:+919999517777">+91 9999517777</a></p>
+                                        
                                     </div>
                                 </div>
                                 <div class="contact-item">
@@ -1751,6 +2089,185 @@
     <script src="assets/js/app.min.js"></script>
     <script src="assets/js/main.js"></script>
 
+        <!-- Bootstrap 5 CSS & JS for modal (CDN) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Catalogue Modal HTML -->
+        <div class="modal fade custom-modal-shadow" id="catalogueModal" tabindex="-1" aria-labelledby="catalogueModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal-red-shadow" style="background: #111; color: #fff; border-radius: 18px; border: none;">
+                    <div class="modal-header" style="background: #111; border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom: 1.5px solid #e32801; box-shadow: none;">
+                        <h5 class="modal-title" id="catalogueModalLabel" style="color: #fff; font-weight: 700; letter-spacing: 0.5px; font-size: 1.18rem;">Catalogue Download Request</h5>
+                        <button type="button" class="btn-close custom-close-highlight" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="background: #111; color: #fff;">
+                        <form id="catalogueForm">
+                            <div class="mb-3">
+                                <label for="companyName" class="form-label" style="color:#fff; font-weight:600;">Company Name</label>
+                                <input type="text" class="form-control" id="companyName" required style="background:#222; color:#fff;  border-radius:7px; font-size:1rem;">
+                            </div>
+                            <div class="mb-3">
+                                <label for="personName" class="form-label" style="color:#fff; font-weight:600;">Person Name</label>
+                                <input type="text" class="form-control" id="personName" required style="background:#222; color:#fff;  border-radius:7px; font-size:1rem;">
+                            </div>
+                            <div class="mb-3">
+                                <label for="businessType" class="form-label" style="color:#fff; font-weight:600;">Business Type</label>
+                                <select class="form-select" id="businessType" required style="background:#222; color:#fff;  border-radius:7px; font-size:1rem;">
+                                    <option value="">Select</option>
+                                    <option value="Distributor">Distributor</option>
+                                    <option value="Retailer">Retailer</option>
+                                    <option value="Mechanic">Mechanic</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phoneNumber" class="form-label" style="color:#fff; font-weight:600;">Phone Number</label>
+                                <input type="tel" class="form-control" id="phoneNumber" required style="background:#222; color:#fff;  border-radius:7px; font-size:1rem;">
+                            </div>
+                            <button type="submit" class="btn w-100" style="background: linear-gradient(135deg, #e32801 0%, #ff5733 100%); color: #fff; font-weight: 600; border-radius: 7px; border: none; box-shadow: 0 2px 8px rgba(227,40,1,0.18); font-size:1.08rem;">Submit</button>
+                        </form>
+                        <form id="codeForm" style="display:none;">
+                            <div class="mb-3">
+                                <label for="downloadCode" class="form-label" style="color:#fff; font-weight:600;">Enter Download Code</label>
+                                <input type="text" class="form-control" id="downloadCode" required style="background:#222; color:#fff;  border-radius:7px; font-size:1rem;">
+                            </div>
+                            <button type="submit" class="btn w-100" style="background: linear-gradient(135deg, #e32801 0%, #ff5733 100%); color: #fff; font-weight: 600; border-radius: 7px; border: none; box-shadow: 0 2px 8px rgba(227,40,1,0.18); font-size:1.08rem;">Verify & Download</button>
+                        </form>
+                        <div id="downloadSection" style="display:none;">
+                            <div class="alert alert-success" style="background: #222; color: #fff; border: 1.5px solid #e32801; font-weight:600;">Code verified! Click below to download:</div>
+                            <a id="downloadLink" href="#" class="btn w-100" style="background: linear-gradient(135deg, #e32801 0%, #ff5733 100%); color: #fff; font-weight: 600; border-radius: 7px; border: none; box-shadow: 0 2px 8px rgba(227,40,1,0.18); font-size:1.08rem;" download>Download Catalogue</a>
+                        </div>
+                            <style>
+                            /* Restore default modal backdrop */
+                            .modal-backdrop.show {
+                                background: rgba(34,34,34,0.65);
+                                backdrop-filter: blur(2.5px);
+                            }
+                            /* Red shadow only on modal border */
+                            .modal-red-shadow {
+                                box-shadow: 0 0 0 4px rgba(227,40,1,0.25), 0 12px 48px 0 rgba(34,34,34,0.25);
+                            }
+                            /* Highlight close icon */
+                            .custom-close-highlight {
+                                background: #111 !important;
+                                border-radius: 50% !important;
+                                opacity: 1 !important;
+                                box-shadow: 0 2px 8px rgba(34,34,34,0.18);
+                                color: #fff !important;
+                                width: 36px;
+                                height: 36px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 1.5rem;
+                                border: 2px solid #e32801;
+                                transition: box-shadow 0.2s, border 0.2s;
+                            }
+                            .custom-close-highlight:focus, .custom-close-highlight:hover {
+                                box-shadow: 0 4px 16px rgba(227,40,1,0.18);
+                                border: 2px solid #111;
+                                background: #e32801 !important;
+                                color: #fff !important;
+                            }
+                            /* Make sure the close icon is visible */
+                            .custom-close-highlight::after {
+                                content: '\00d7';
+                                font-size: 1.5rem;
+                                color: #fff;
+                                display: block;
+                                margin: auto;
+                                font-weight: bold;
+                            }
+                            .custom-close-highlight .btn-close {
+                                filter: none !important;
+                            }
+                            </style>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Show modal on catalogue dropdown click
+            document.querySelectorAll('.catalogue-option').forEach(function(el) {
+                el.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // Set download link text and href based on option
+                    let type = el.getAttribute('data-catalogue');
+                    let link = '#';
+                    let text = 'Download Catalogue';
+                    if(type==='complete') { link = 'catalogue-complete.pdf'; text = 'Download Complete Catalogue'; }
+                    if(type==='new') { link = 'catalogue-new-edition.pdf'; text = 'Download New Edition Catalogue'; }
+                    if(type==='price') { link = 'catalogue-price-list.pdf'; text = 'Download Price List Catalogue'; }
+                    document.getElementById('downloadLink').href = link;
+                    document.getElementById('downloadLink').textContent = text;
+                    // Reset forms
+                    document.getElementById('catalogueForm').style.display = '';
+                    document.getElementById('codeForm').style.display = 'none';
+                    document.getElementById('downloadSection').style.display = 'none';
+                    document.getElementById('catalogueForm').reset();
+                    document.getElementById('codeForm').reset();
+                    var modal = new bootstrap.Modal(document.getElementById('catalogueModal'));
+                    modal.show();
+                });
+            });
+            // On form submit, show code input
+            document.getElementById('catalogueForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                document.getElementById('catalogueForm').style.display = 'none';
+                document.getElementById('codeForm').style.display = '';
+            });
+            // On code submit, show download
+            document.getElementById('codeForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                // For now, any code is accepted
+                document.getElementById('codeForm').style.display = 'none';
+                document.getElementById('downloadSection').style.display = '';
+            });
+        </script>
+
+        <!-- Remove '#' from URL after Google Translate dropdown and close menu -->
+        <script>
+            // Remove '#' from URL as soon as it appears
+            function removeHash() {
+                if (window.location.hash && window.location.hash.startsWith('#googtrans')) {
+                    history.replaceState(null, '', window.location.pathname + window.location.search);
+                }
+            }
+            window.addEventListener('hashchange', removeHash);
+            // Also check periodically in case hashchange doesn't fire
+            setInterval(removeHash, 300);
+
+            // Close Google Translate dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                var menuFrame = document.querySelector('.goog-te-menu-frame');
+                if (menuFrame && menuFrame.style.display !== 'none') {
+                    if (!menuFrame.contains(e.target)) {
+                        menuFrame.style.display = 'none';
+                    }
+                }
+            });
+        </script>
+
+        <!-- Prevent Google Translate dropdown from adding '#' to URL and close dropdown on outside click -->
+        <script>
+            // Remove '#' from URL when Google Translate dropdown is used
+            window.addEventListener('hashchange', function() {
+                if (window.location.hash === '#googtrans(en|en)' || window.location.hash.startsWith('#googtrans')) {
+                    history.replaceState(null, '', window.location.pathname + window.location.search);
+                }
+            });
+
+            // Close Google Translate dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                var menuFrame = document.querySelector('.goog-te-menu-frame');
+                if (menuFrame && menuFrame.style.display !== 'none') {
+                    if (!menuFrame.contains(e.target)) {
+                        menuFrame.style.display = 'none';
+                    }
+                }
+            });
+        </script>
+
     <script>
         // Rotating Tagline Script
         const taglines = [
@@ -1783,25 +2300,38 @@
     </script>
 
 
-  <script>
-  $(function(){
-    $('#vmap').vectorMap({
-      map: 'world_en',
-      backgroundColor: 'transparent',
-      borderColor: '#666',
-      borderOpacity: 0.5,
-      borderWidth: 0.5,
-      color: '#fff',
-      hoverColor: '#fff',
-      selectedColor: '#29166F',
-      enableZoom: true,
-      showTooltip: true,
-      selectedRegions: [
-        "US","CA","GB","IE","DE","FR","NL",
-        "SE","NO","DK","IN","AU","NZ",
-        "GL","IS","PT","ES","BE","CH","IT","AT","AE","ZA","JP"
-      ]
-    });
+    <script>
+        $(function () {
+            $('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: 'transparent',
+                borderColor: '#666',
+                borderOpacity: 0.5,
+                borderWidth: 0.5,
+                color: '#fff',
+                hoverColor: '#fff',
+                selectedColor: '#29166F',
+                enableZoom: true,
+                showTooltip: true,
+                selectedRegions: [
+                    "US", "CA", "GB", "IE", "DE", "FR", "NL",
+                    "SE", "NO", "DK", "IN", "AU", "NZ",
+                    "GL", "IS", "PT", "ES", "BE", "CH", "IT", "AT", "AE", "ZA", "JP"
+                ]
+            });
+        });
+    </script>
+    <script>
+  // Close Google Translate dropdown when clicking outside
+  document.addEventListener('click', function(e) {
+    // Check if the Google Translate menu frame exists
+    var menuFrame = document.querySelector('.goog-te-menu-frame');
+    if (menuFrame) {
+      // If the click is outside the menu frame, hide it
+      if (!menuFrame.contains(e.target)) {
+        menuFrame.style.display = 'none';
+      }
+    }
   });
 </script>
 </body>
