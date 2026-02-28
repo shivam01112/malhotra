@@ -315,6 +315,87 @@
             display: block;
         }
 
+        /* ── 1960 Big Centrepiece ── */
+        .hero-1960-block {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin-bottom: 6px;
+        }
+        .hero-1960-est {
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: 8px;
+            color: #e32801;
+            text-transform: uppercase;
+            margin-bottom: -4px;
+            text-shadow: 0 0 12px rgba(227,40,1,0.55);
+            display: inline-block;
+        }
+        .hero-1960-num {
+            font-size: 88px;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: 6px;
+            position: relative;
+            display: inline-block;
+            /* Solid white with red glow — fully on-brand */
+            color: #ffffff;
+            text-shadow:
+                0 0 0px #fff,
+                0 2px 12px rgba(0,0,0,0.6);
+            /* animation: pulse1960 3s ease-in-out infinite; */
+        }
+        /* red underline stroke accent */
+        .hero-1960-num::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #e32801 0%, #ff5733 60%, transparent 100%);
+            border-radius: 4px;
+            margin-top: 10px;
+            box-shadow: 0 0 14px rgba(227,40,1,0.7);
+            animation: lineGrow 0.8s ease-out forwards 0.5s;
+            transform-origin: left;
+        }
+        @keyframes lineGrow {
+            from { transform: scaleX(0); }
+            to   { transform: scaleX(1); }
+        }
+        @keyframes pulse1960 {
+            0%,100% {
+                text-shadow: 0 0 0px #fff, 0 2px 12px rgba(0,0,0,0.6),
+                             0 0 30px rgba(227,40,1,0.2);
+            }
+            50% {
+                text-shadow: 0 0 40px rgba(255,255,255,0.15), 0 2px 12px rgba(0,0,0,0.6),
+                             0 0 60px rgba(227,40,1,0.45);
+            }
+        }
+        .hero-1960-since {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 5px;
+            color: #e32801;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+        .hero-1960-divider {
+            width: 60px;
+            height: 3px;
+            background: #e32801;
+            border-radius: 4px;
+            margin: 14px 0 20px 0;
+            box-shadow: 0 0 10px rgba(227,40,1,0.6);
+        }
+        @media (max-width: 991px) {
+            .hero-1960-num { font-size: 72px; }
+        }
+        @media (max-width: 575px) {
+            .hero-1960-num { font-size: 54px; letter-spacing: 4px; }
+        }
+
         .hero-desc {
             font-size: 16px;
             line-height: 1.7;
@@ -657,7 +738,13 @@
                 </style>
                 <div class="header-contact-btn">
                     <a href="contact.html" class="th-btn sm"
-                        style="padding: 14px 11px; font-size: 1rem; font-weight: 600; background: #e32801; color: #fff; border-radius: 22px; border: none;">Contact
+                        style="padding: 14px 11px;
+    font-size: 15px;
+    font-weight: 600;
+    background: #e32801;
+    color: #fff;
+    border-radius: 5px;
+    border: none;">Contact
                         Us <i class="fas fa-arrow-up-right"></i></a>
                 </div>
             </div>
@@ -734,13 +821,9 @@
                                 <select id="customLangSelect" onchange="doGTranslate(this.value);document.getElementById('langLabel').textContent=this.options[this.selectedIndex].text||'Language';" aria-label="Select Language">
                                     <option value="">Language</option>
                                     <option value="en|en">English</option>
-                                    <option value="en|hi">हिन्दी</option>
-                                    <option value="en|fr">Français</option>
-                                    <option value="en|de">Deutsch</option>
-                                    <option value="en|es">Español</option>
-                                    <option value="en|ar">العربية</option>
-                                    <option value="en|zh-CN">中文</option>
-                                    <option value="en|ja">日本語</option>
+                                    <option value="en|fr">French</option>
+                                    <option value="en|es">Spanish</option>
+                                    <option value="en|de">German</option>
                                 </select>
                                 <i class="fas fa-chevron-down custom-lang-arrow"></i>
                             </div>
@@ -914,22 +997,26 @@
                             <div class="row gy-4 gx-40 align-items-center">
                                 <div class="col-xl-6 col-lg-7">
                                     <div class="hero-style4">
-                                        <div class="hero-badge slideinup" data-ani="slideinup" data-ani-delay="0.1s"
-                                            style="animation-delay: 0.1s; display: inline-block; background: #e32801; color: white; padding: 8px 20px; border-radius: 50px; font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 15px;">
-                                            ⭐ INDUSTRY LEADER SINCE 1960
+                                        <!-- Sub label -->
+                                        <span class="hero4-sub-title slideinup"  data-ani="slideinup"
+                                            data-ani-delay="0.1s" style="animation-delay: 0.1s;">Premium &bull;  Hydraulic &bull; Brake &bull; Systems</span>
+
+                                        <!-- 1960 as main heading -->
+                                        <div class="hero-1960-block slideinup" data-ani="slideinup" data-ani-delay="0.2s" style="animation-delay: 0.2s;">
+                                            <span class="hero-1960-est mb-2">Since</span>
+                                            <span class="hero-1960-num">1960</span>
+                                            <!-- <span class="hero-1960-since">Industry Leader &mdash; 65+ Years of Excellence</span> -->
                                         </div>
-                                        <span class="hero4-sub-title slideinup" data-ani="slideinup"
-                                            data-ani-delay="0.2s" style="animation-delay: 0.2s;">Precision • Performance
-                                            • Reliability</span>
-                                        <h1 class="hero-title slideinup" data-ani="slideinup" data-ani-delay="0.4s"
-                                            style="animation-delay: 0.4s;">Premium Hydraulic <span class="title2">Brake
-                                                Systems</span>
-                                        </h1>
+
+                                        <!-- <div class="hero-1960-divider slideinup" data-ani="slideinup" data-ani-delay="0.35s" style="animation-delay: 0.35s;"></div> -->
+
+                                        <h2 class="hero-title slideinup mt-4" data-ani="slideinup" data-ani-delay="0.45s"
+                                            style="animation-delay: 0.45s; font-size: 28px; font-weight: 700; color: #ffffff; margin-bottom: 12px; letter-spacing: 0.5px;">Precision &bull; Performance &bull; <span style="color:#e32801;">Reliability</span>
+                                        </h2>
+
                                         <p class="hero-desc slideinup" data-ani="slideinup" data-ani-delay="0.6s"
-                                            style="animation-delay: 0.6s; font-size: 16px; line-height: 1.6; color: #d0d0d0; margin: 20px 0 30px 0;">
-                                            Engineered for excellence with over 65 years of expertise. Trusted by global
-                                            automotive manufacturers for hydraulic brake components that deliver
-                                            superior safety and durability.
+                                            style="animation-delay: 0.6s; font-size: 15px; line-height: 1.7; color: #b0b0b0; margin: 10px 0 28px 0;">
+                                            Trusted by global automotive manufacturers for hydraulic brake components that deliver superior safety and durability.
                                         </p>
                                         <div class="btn-group justify-content-start gap-3 slideinup"
                                             data-ani="slideinup" data-ani-delay="0.8s" style="animation-delay: 0.8s;">
